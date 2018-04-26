@@ -1,0 +1,11 @@
+{
+  "name": "portfolio-theme",
+  "version": "2.3.0",
+  "devDependencies": {
+    "grunt": "~0.4.1",
+    "grunt-contrib-uglify": "^3.3.0"
+  },
+  "dependencies": {
+    "grunt-cli": "^1.2.0"
+  }
+}
