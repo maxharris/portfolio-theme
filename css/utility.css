@@ -1,0 +1,91 @@
+
+/* Modals */
+
+.modal {
+    background-color: rgba(0,0,0,0.3);
+    bottom: 0;
+    display: none;
+    height: 100vh;
+    left: 0;
+    opacity: 0;
+    position: fixed;
+    right: 0;
+    top: 0;
+    transition: opacity 0.6s ease-in-out;
+    width: 100vw;
+    will-change: opacity;
+    z-index: 500;
+}
+
+.modal.open {
+    display: block;
+    opacity: 1;
+}
+
+.modal .modal-content {
+    background: #fff;
+    margin: 10vw 20vw;
+    box-shadow: 0 3px 3px #000;
+}
+
+
+/* Tabs */
+
+.radio-tabs .state {
+    position: absolute;
+    left: -10000px;
+}
+
+#press-2017:focus ~ .tabs #press-2017-tab,
+#press-2016:focus ~ .tabs #press-2016-tab,
+#press-2015:focus ~ .tabs #press-2015-tab,
+#press-2014:focus ~ .tabs #press-2014-tab,
+#press-2013:focus ~ .tabs #press-2013-tab {
+    box-shadow: 0 0 3px 3px rgba(0,127,255,.5);
+}
+
+.radio-tabs .tab {
+    display: inline-block;
+    padding: .5em;
+    vertical-align: top;
+    background-color: #eee;
+    cursor: hand;
+    cursor: pointer;
+}
+
+.radio-tabs .tab:hover {
+    background-color: #fff;
+}
+
+#press-2017[aria-selected] ~ .tabs #press-2017-tab,
+#press-2016[aria-selected] ~ .tabs #press-2016-tab,
+#press-2015[aria-selected] ~ .tabs #press-2015-tab,
+#press-2017:checked ~ .tabs #press-2017-tab,
+#press-2016:checked ~ .tabs #press-2016-tab,
+#press-2015:checked ~ .tabs #press-2015-tab,
+#press-2014:checked ~ .tabs #press-2014-tab,
+#press-2013:checked ~ .tabs #press-2013-tab {
+    background-color: #fff;
+    border-bottom: .3em solid #fff;
+    cursor: default;
+}
+
+.radio-tabs .panels {
+    background-color: #fff;
+    padding: .5em;
+}
+
+.radio-tabs .panel {
+    display: none;
+}
+
+#press-2017[aria-selected] ~ .panels #press-2017-panel,
+#press-2016[aria-selected] ~ .panels #press-2016-panel,
+#press-2015[aria-selected] ~ .panels #press-2015-panel,
+#press-2017:checked ~ .panels #press-2017-panel,
+#press-2016:checked ~ .panels #press-2016-panel,
+#press-2015:checked ~ .panels #press-2015-panel,
+#press-2014:checked ~ .panels #press-2014-panel,
+#press-2013:checked ~ .panels #press-2013-panel {
+    display: block;
+}
