@@ -1,0 +1,45 @@
+#section-portfolio {
+  float: right;
+  width: 60%;
+}
+
+#section-portfolio ul {
+  margin-top: 15px;
+}
+
+#section-portfolio ul li {
+  float: left;
+  overflow: hidden;
+  padding: 10px 5px;
+  position: relative;
+  width: 33.333%;
+}
+
+#section-portfolio ul li .image-wrapper img {
+  border: 1px solid #eee;
+}
+
+#section-portfolio ul li .project-meta {
+  background: #fff;
+  box-shadow: 0 0 6px -1px #333;
+  bottom: 0;
+  color: #111;
+  height: 60px;
+  left: 0;
+  margin: auto 12%;
+  opacity: 0;
+  padding: 15px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  transition: opacity 0.2s ease-in-out;
+  z-index: 200;
+}
+
+#section-portfolio ul li:hover .project-meta {
+  opacity: 1;
+}
+
+#section-portfolio ul li .project-meta h4 {
+  line-height: 28px;
+}
