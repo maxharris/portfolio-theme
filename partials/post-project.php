@@ -5,7 +5,7 @@
 ?>
 
 <li>
-  <a href="<?php echo get_post_meta($post->ID, 'article_url', true); ?>" target="_blank">
+  <a href="<?php the_permalink(); ?>">
     <div class="image-wrapper">
       <?php the_post_thumbnail('article-thumb'); ?>
     </div>

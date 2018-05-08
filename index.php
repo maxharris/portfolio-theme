@@ -6,9 +6,9 @@
     <?php
      while ( have_posts() ) : the_post(); ?> <!--Because the_content() works only inside a WP Loop -->
           <div class="entry-content-page">
-              <h2><?php// the_title(); ?></h2> <!-- Page Content -->
+              <h2 class="title"><?php the_title(); ?></h2> <!-- Page Content -->
               <?php the_content(); ?> <!-- Page Content -->
-          </div><!-- .entry-content-page -->
+          </div>
       <?php
       endwhile; //resetting the page loop
       wp_reset_query(); //resetting the page query

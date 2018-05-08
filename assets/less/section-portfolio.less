@@ -1,18 +1,18 @@
 #section-portfolio {
+  .make-col(8);
   float: right;
-  width: 60%;
 }
 
 #section-portfolio ul {
-  margin-top: 15px;
+  margin-top: @baseSpacing;
 }
 
 #section-portfolio ul li {
+  .make-col(4);
   float: left;
   overflow: hidden;
-  padding: 10px 5px;
+  padding: @baseSpacing (@baseSpacing / 2);
   position: relative;
-  width: 33.333%;
 }
 
 #section-portfolio ul li .image-wrapper img {
@@ -20,7 +20,7 @@
 }
 
 #section-portfolio ul li .project-meta {
-  background: #fff;
+  background: @white;
   box-shadow: 0 0 6px -1px #333;
   bottom: 0;
   color: #111;

@@ -1,98 +1,30 @@
 footer {
   background-color: #111;
-  color: #fff;
+  color: @white;
   text-align: center;
-}
 
-footer .container {
-  padding: 60px 30px;
-  position: relative;
-  width: 100%;
-}
+  .flex-container {
+    padding: @baseSpacing;
+    position: relative;
 
-footer span {
-  color: #fff;
-  display: inline-block;
-  font-size: 0.9em;
-  font-weight: 600;
-  line-height: 1.2em;
-  margin: 5px;
-  text-transform: uppercase;
-  width: 100%;
-}
+    span {
+      font-size: 0.6em;
+      text-transform: uppercase;
+    }
+  }
 
-footer span a {
-  color: inherit;
-  opacity: 0.7;
-}
-
-footer a {
-  color: #fff;
-  display: inline-block;
-}
-
-footer a:hover {
-  color: #FCD036;
-  opacity: 1;
-} 
-
-footer aside {
-  clear: none;
-  float: left;
-  font-size: 1em;
-  padding: 15px;
-  text-align: center;
-  width: 100%;
-}
-
-footer aside h4 {
-  font-weight: 600;
-  letter-spacing: 0.25em;
-  margin-bottom: 15px;
-}
-
-footer aside ul li a {
-  padding: 10px 0;
-}
-
-footer aside.widget_nav_menu ul li {
-  display: inline;
-  margin: 15px;
-}
-
-footer aside ul li.fa {
-  display: inline-block;
-  font-size: 1.5em;
-  margin: 15px;
-  position: relative;
-}
-
-footer aside ul li.fa::before {
-  left: 0;
-  line-height: 60px;
-  position: absolute;
-  right: 0;
-  transition: border-color 0.3s ease-in-out;
-}
-
-footer aside ul li.fa a {
-  border: 2px solid #fff;
-  display: inline-block;
-  height: 60px;
-  line-height: 60px;
-  padding: 5px;
-  position: relative;
-  transition: color 0.3s ease-in-out;
-  width: 60px;
-  z-index: 300;
-}
-
-footer aside ul li.fa:hover::before {
-  transition: color 0.3s ease-in-out;
-}
-
-footer aside ul li.fa:hover a,
-footer aside ul li.fa:hover::before{
-  border-color: #FCD036;
-  color: #FCD036;
+  aside {
+    clear: none;
+    float: left;
+    font-size: 1em;
+    padding: 15px;
+    text-align: center;
+    width: 100%;
+    
+     h4 {
+      font-weight: 600;
+      letter-spacing: 0.25em;
+      margin-bottom: 15px;
+    }
+  } 
 }

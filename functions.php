@@ -34,8 +34,8 @@ function wecanwordpress_widgets_init() {
     register_sidebar(array(
       'name' => __( 'Sidebar 1', 'sidebar-1' ),
       'id' => 'sidebar-1',
-        'before_widget' => '<aside id="%1$s" class="widget %2$s">',
-        'after_widget' => "</aside>",
+      'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+      'after_widget' => "</aside>",
       'before_title' => '<h4>',
       'after_title' => '</h4>',
     ));
