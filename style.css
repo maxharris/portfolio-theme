@@ -359,26 +359,31 @@ section {
   will-change: box-shadow;
   background-color: #ffffff;
   box-shadow: transparent;
-  text-align: center;
+  position: fixed;
+  top: -90px;
   width: 100%;
   z-index: 900;
 }
 #header.sticky {
   box-shadow: 0 0 12px -2px #333333;
-  position: fixed;
   top: 0;
+}
+#header.sticky .container-fluid .logo {
+  max-height: 100px;
+  width: 200px;
 }
 #header .container-fluid {
   padding: 15px 30px;
 }
 #header .container-fluid .logo {
-  transition: max-height 0.2s ease-in;
-  will-change: max-height;
+  transition: max-height 0.3s ease-in-out;
   max-height: 0;
-  max-width: 0;
 }
 .logo {
-  max-width: 300px;
+  width: 300px;
+}
+.admin-bar #header {
+  margin-top: 32px;
 }
 footer {
   background-color: #111;
@@ -414,36 +419,43 @@ footer aside h4 {
 #section-portfolio {
   float: left;
   padding: 30px;
-  width: 50%;
+  width: 100%;
   text-align: center;
 }
 #section-portfolio ul li {
   float: left;
-  padding: 10px;
-  width: 33.33333333%;
+  padding: 30px 0;
+  width: 100%;
+  margin-bottom: 30px;
 }
 #section-portfolio ul li .image-wrapper {
-  border: 1px solid #888888;
+  padding: 30px 0;
+  width: 58.33333333%;
+  float: left;
   position: relative;
 }
+#section-portfolio ul li .image-wrapper img {
+  position: relative;
+  z-index: 100;
+}
 #section-portfolio ul li .image-wrapper .project-meta {
-  transition: opacity 0.2s ease-in;
-  will-change: opacity;
-  opacity: 0;
-  background: rgba(0, 60, 90, 0.9);
-  bottom: 0;
+  background: #111111;
+  bottom: -3%;
   box-shadow: 0 0 6px -1px #333333;
   color: #ffffff;
-  height: 100%;
-  left: 0;
-  padding: 15px;
+  padding: 30px;
   position: absolute;
-  right: 0;
-  top: 0;
-}
-#section-portfolio ul li .image-wrapper .project-meta:hover {
-  opacity: 1;
+  right: -4%;
+  text-align: left;
+  width: 60%;
+  z-index: 200;
 }
 #section-portfolio ul li .image-wrapper .project-meta h3 {
   margin-bottom: 0;
+}
+#section-portfolio ul li:nth-of-type(2n) .image-wrapper {
+  float: right;
+}
+#section-portfolio ul li:nth-of-type(2n) .image-wrapper .project-meta {
+  left: -5%;
 }

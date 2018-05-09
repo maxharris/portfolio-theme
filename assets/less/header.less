@@ -2,27 +2,39 @@
   .transition(box-shadow);
   background-color: @white;
   box-shadow: transparent;
-  text-align: center;
+  position: fixed;
+  top: -90px;
   width: 100%;
   z-index: 900;
 
   &.sticky {
     box-shadow: @box-shadow-heavy;
-    position: fixed;
     top: 0;
+
+    .container-fluid {
+      .logo {
+        max-height: 100px;
+        width: 200px;
+      }
+    }
   }
 
   .container-fluid {
     padding: (@baseSpacing / 2) @baseSpacing;
 
     .logo {
-      .transition(max-height);
+      transition: max-height 0.3s ease-in-out;
       max-height: 0;
-      max-width: 0;
     }
   }
 }
 
 .logo {
-  max-width: 300px;
+  width: 300px;
+}
+
+.admin-bar {
+  #header {
+    margin-top: 32px;
+  }
 }

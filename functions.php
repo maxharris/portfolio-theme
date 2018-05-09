@@ -58,8 +58,7 @@ add_action( 'init', 'wecanwordpress_widgets_init' );
 
 
 add_filter('avf_which_archive_output','avf_change_which_archive', 10, 3);
-function avf_change_which_archive($output)
-{
+function avf_change_which_archive($output) {
   if(is_category())
   {
     $output = single_cat_title('',false);
@@ -152,11 +151,11 @@ add_action( 'wp_enqueue_scripts', 'enqueue_styles' );
    
 
 // ENQUEUE SCRIPTS
-function enqueue_scripts() {
-  wp_register_script( 'jb-analytics', get_stylesheet_directory_uri() . '/production-assets/js/analytics.min.js', array( 'jquery' ), '1', false );
-  wp_enqueue_script( 'jb-analytics' );    
-}
-add_action( 'wp_enqueue_scripts', 'enqueue_scripts' );
+// function enqueue_scripts() {
+//   wp_register_script( 'jb-analytics', get_stylesheet_directory_uri() . '/production-assets/js/analytics.min.js', array( 'jquery' ), '1', false );
+//   wp_enqueue_script( 'jb-analytics' );    
+// }
+// add_action( 'wp_enqueue_scripts', 'enqueue_scripts' );
 
 
 // ENQUEUE FOOTER SCRIPTS
