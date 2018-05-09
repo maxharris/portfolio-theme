@@ -4,11 +4,6 @@ define("THEME_DIR", get_template_directory_uri());
 /*--- REMOVE GENERATOR META TAG ---*/
 remove_action('wp_head', 'wp_generator');
 
-
-// ADD IMAGE SIZES
-// add_image_size( 'article-thumb', 400, 400, true );
-
-
 // REGISTER MENUS
 function register_menus() {
     register_nav_menus( array(
@@ -145,14 +140,10 @@ function storm_social_icons_networks( $networks ) {
  
 }
 
-
 // ENQUEUE STYLES
 function enqueue_styles() {
   wp_register_style( 'font-awesome-style', THEME_DIR . '/css/font-awesome.min.css', array(), '1', 'all' );
   wp_enqueue_style( 'font-awesome-style' );
-
-  wp_register_style( 'grid-style', THEME_DIR . '/css/grid.css', array(), '1', 'all' );
-  wp_enqueue_style( 'grid-style' );
        
   wp_register_style( 'main-style', get_stylesheet_uri() );
   wp_enqueue_style( 'main-style' );
@@ -162,7 +153,7 @@ add_action( 'wp_enqueue_scripts', 'enqueue_styles' );
 
 // ENQUEUE SCRIPTS
 function enqueue_scripts() {
-  wp_register_script( 'jb-analytics', get_stylesheet_directory_uri() . '/js/min/analytics.min.js', array( 'jquery' ), '1', false );
+  wp_register_script( 'jb-analytics', get_stylesheet_directory_uri() . '/production-assets/js/analytics.min.js', array( 'jquery' ), '1', false );
   wp_enqueue_script( 'jb-analytics' );    
 }
 add_action( 'wp_enqueue_scripts', 'enqueue_scripts' );
@@ -171,7 +162,7 @@ add_action( 'wp_enqueue_scripts', 'enqueue_scripts' );
 // ENQUEUE FOOTER SCRIPTS
 function enqueue_footer_scripts() {
   if ( is_front_page() ) {       
-    wp_register_script( 'custom-script', get_stylesheet_directory_uri() . '/js/min/scripts.min.js', array( 'jquery' ), '1', true );
+    wp_register_script( 'custom-script', get_stylesheet_directory_uri() . '/production-assets/js/min/scripts.min.js', array( 'jquery' ), '1', true );
     wp_enqueue_script( 'custom-script' );
     
     $upload_dir = wp_upload_dir();

@@ -7,15 +7,13 @@
   max-width: 100%;
   overflow: auto;
   position: relative;
-  width: 1200px;
-  z-index: 100;
+  width: @container-width;
 }
 
 .container-fluid {
   overflow: hidden;
   padding: 20px;
   width: 100%;
-  z-index: 100;
 }
 
 .row(@padding:@basSpacing) {
@@ -28,12 +26,6 @@
     clear: both;
     display: table;
   }
-}
-
-.make-col(@columns:@columns, @padding:@baseSpacing) {
-  padding-left: @baseSpacing;
-  padding-right: @baseSpacing;
-  width: 100%*(@columns / @baseColumnCount);
 }
 
 @media only screen and (min-width: 1200px) {

@@ -1,3 +1,34 @@
-.make-col-sm(@columns; @gutter: @baseSpacing) {
-	
+.text() {
+  font: @font-size-base @font-family-text;
+  font-weight: @font-weight-light;
+  letter-spacing: @letter-spacing-text;
+  line-height: @line-height-text;
+}
+
+.title(@font-family:@font-family-title) {
+  font: @font-size-title @font-family;
+  font-weight: @font-weight-heavy;
+  letter-spacing: @letter-spacing-title;
+  margin-bottom: @baseSpacing / 2;
+  text-transform: uppercase;
+}
+
+.make-col(@columns:@columns, @padding:@baseSpacing) {
+	float: left;
+  padding: @padding;
+  width: 100%*(@columns / @baseColumnCount);
+}
+
+.transition(@property, @speed:@transition-speed) {
+	transition: @property @speed ease-in;
+	will-change: @property;
+}
+
+.fade-in() {
+	.transition(opacity);
+	opacity: 0;
+
+	&:hover {
+		opacity: 1;
+	}
 }

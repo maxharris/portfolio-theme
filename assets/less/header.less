@@ -1,25 +1,28 @@
 #header {
+  .transition(box-shadow);
+  background-color: @white;
+  box-shadow: transparent;
+  text-align: center;
   width: 100%;
   z-index: 900;
-}
 
-#header {
-  background-color: #fff;
-  transition: background-color 0.3s ease-in-out;
-  will-change: background-color;
-}
+  &.sticky {
+    box-shadow: @box-shadow-heavy;
+    position: fixed;
+    top: 0;
+  }
 
-body.home #header.sticky {
-  box-shadow: 0 0 12px -2px #777;
-  position: fixed;
-  top: 0;
-}
+  .container-fluid {
+    padding: (@baseSpacing / 2) @baseSpacing;
 
-#header .container {
-  background: transparent;
-  padding: 15px 60px;
+    .logo {
+      .transition(max-height);
+      max-height: 0;
+      max-width: 0;
+    }
+  }
 }
 
 .logo {
-  max-width: 200px;
+  max-width: 300px;
 }

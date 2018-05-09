@@ -1,12 +1,45 @@
 // Colors
-@brand-blue: #3299BB;
-@dark-blue: #E41A5C;
+@black: #111;
+@blue: #00A0EE;
+@dark-blue: #003C5A;
 @grey: #333;
+@grey-light: #888;
 @white: #fff;
+@yellow: #FFB800;
 
-// Grid
-@baseColumnCount: 12;
-@baseSpacing: 15px;
+@brand-color: @blue;
+@brand-color-dark: @dark-blue;
+@brand-color-light: @yellow;
+
+@text-color: @black;
+@link-color: @brand-color;
+
+// Borders
+@border-thin: 1px solid;
+@border-thick: 3px solid;
+
+@border-thin-light: @border-thin @grey-light;
+
+// Text
+@font-family-text: "Lato", Geneva, Tahoma, sans-serif;
+@font-family-title: "Lato", Geneva, Tahoma, sans-serif;
+@font-family-button: "Lato", Geneva, Tahoma, sans-serif;
+
+@font-size-base: 16px;
+@font-size-heading: 3.6rem;
+@font-size-title: 1.4rem;
+
+@font-weight-light: 400;
+@font-weight-heavy: 700;
+
+@letter-spacing-text: 0.082rem;
+@letter-spacing-title: 0.1rem;
+
+@line-height-text: 1.6rem;
+@line-height-title: 1.6rem;
+
+// Buttons
+@font-size-button: 1.2rem;
 
 // Media Sizes
 @min-device-width-large-desktop: 1800px;
@@ -14,3 +47,15 @@
 @min-device-width-tablet: 900px;
 @min-device-width-phone: 600px;
 @max-device-width-phone: 599px;
+
+// Grid
+@container-width: 1200px;
+@baseColumnCount: 12;
+@baseSpacing: 30px;
+
+// Shadows
+@box-shadow: 0 0 6px -1px @grey;
+@box-shadow-heavy: 0 0 12px -2px @grey;
+
+// Transitions
+@transition-speed: 0.2s;

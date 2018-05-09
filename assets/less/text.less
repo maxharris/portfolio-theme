@@ -1,80 +1,62 @@
+
 h1, h2, h3, h4 {
-  text-transform: uppercase;
+  .title()
 }
 
 h1 {
-  color: #00A0EE;
-  font-size: 3.6em;
-  font-weight: 700;
-  margin-top: 30px;
+  margin-top: @baseSpacing;
 }
 
 h2 {
-  font-size: 1.6em;
-  font-weight: 400;
-  margin: 30px auto;
-  max-width: 100%;
-  text-transform: uppercase;
+  color: @brand-color;
 }
   
 h3 {
-  font-size: 1.2em;
-  font-weight: 700;
-  letter-spacing: 0.1em;
-  line-height: 1.2em;
-  margin: 5px 0;
-  text-transform: uppercase;
+  font-weight: @font-weight-light;
+  margin: 0 auto (@baseSpacing / 3);
 }
 
 p {
-  clear: both;
-  font-weight: 400;
-  line-height: 1.6em; 
-  margin: 0 auto 15px;
-  max-width: 800px;
-  padding: 0 5px;
-}
-
-strong {
-  font-weight: 700;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
+  line-height: @line-height-text;
+  margin: 0 auto @baseSpacing;
 }
 
 a {
-  color: #111;
+  .transition(color);
+  .transition(background-color);
+  color: @link-color;
   text-decoration: none;
-  transition: color 0.2s, background-color 0.2s;
+
+  &:active,
+  &:hover {
+    color: lighten(@link-color, 7%);
+  }
 }
 
-a:active,
-a:hover {
-  color: #E41A5C;
-}
-
-.btn,
+button,
 a.btn {
   background-color: @white;
-  border: 3px solid @black;
-  color: #111;
-  cursor: pointer;
+  border: @border-thick;
+  color: @black;
   display: inline-block;
-  font-size: 1.2em;
-  font-weight: 600;
-  letter-spacing: 0.082em;
-  margin: 30px auto 0;
-  max-width: 400px;
-  padding: 15px 30px;
-  text-align: center;
+  font: @font-size-button @font-family-button;
+  font-weight: @font-weight-heavy;
+  padding: @baseSpacing / 2;
   text-transform: uppercase;
+  text-align: center;
+
+  &:hover,
+  &:active {
+    color: lighten(@link-color, %7);
+  }
 }
 
 ul {
   overflow: hidden;
   padding-left: 0;
-}
 
-ul li {
-  list-style-type: none;
+  li {
+    list-style-type: none;
+  }
 }
 
