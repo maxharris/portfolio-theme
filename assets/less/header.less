@@ -8,7 +8,7 @@
   z-index: 900;
 
   &.sticky {
-    box-shadow: @box-shadow-heavy;
+    box-shadow: @box-shadow;
     top: 0;
 
     .container-fluid {
@@ -29,12 +29,6 @@
   }
 }
 
-.logo {
-  width: 300px;
-}
-
-.admin-bar {
-  #header {
-    margin-top: 32px;
-  }
+.admin-bar #header {
+  margin-top: 32px; // Accounting for the WordPress admin bar when present
 }

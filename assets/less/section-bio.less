@@ -1,3 +1,17 @@
 #section-bio {
-	.make-col(6);
+	background-color: @blue-dark;
+
+	& * {
+		color: @white;
+	}
+
+	.container {
+		.make-col(8);
+		.push(2);
+
+		.logo {
+			margin-bottom: @baseSpacing;
+		  width: 320px;
+		}
+	}
 }

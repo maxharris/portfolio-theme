@@ -1,14 +1,14 @@
 // Colors
 @black: #111;
 @blue: #00A0EE;
-@dark-blue: #003C5A;
+@blue-dark: #003C5A;
 @grey: #333;
-@grey-light: #888;
-@white: #fff;
+@grey-light: #C9C9C9;
+@white: #FFF;
 @yellow: #FFB800;
 
 @brand-color: @blue;
-@brand-color-dark: @dark-blue;
+@brand-color-dark: @blue-dark;
 @brand-color-light: @yellow;
 
 @text-color: @black;
@@ -20,23 +20,32 @@
 
 @border-thin-light: @border-thin @grey-light;
 
-// Text
-@font-family-text: "Lato", Geneva, Tahoma, sans-serif;
-@font-family-title: "Lato", Geneva, Tahoma, sans-serif;
-@font-family-button: "Lato", Geneva, Tahoma, sans-serif;
+// Text Base
+@font-family-serif: Cambria, "Hoefler Text", Utopia, "utopia-std-subhead", "Liberation Serif", "Nimbus Roman No9 L Regular", Times, "Times New Roman", serif;
+@font-family-sans-serif: "Lato", Geneva, Tahoma, sans-serif;
 
 @font-size-base: 16px;
-@font-size-heading: 3.6rem;
-@font-size-title: 1.4rem;
+@font-size-xl: 3.6rem;
+@font-size-lg: 2.4rem;
+@font-size-md: 1.2rem;
+@font-size-sm: @font-size-base;
+@font-size-xs: 0.8rem;
 
 @font-weight-light: 400;
 @font-weight-heavy: 700;
 
-@letter-spacing-text: 0.082rem;
+// Text Styles
+@font-family-title: @font-family-serif;
+@font-family-heading: @font-family-sans-serif;
+@font-family-body: @font-family-sans-serif;
+@font-family-button: @font-family-serif;
+
+@letter-spacing-body: 0.082rem;
 @letter-spacing-title: 0.1rem;
 
-@line-height-text: 1.6rem;
-@line-height-title: 1.6rem;
+@line-height-title: 2.6rem;
+@line-height-heading: 1.6rem;
+@line-height-body: 1.6rem;
 
 // Buttons
 @font-size-button: 1.2rem;

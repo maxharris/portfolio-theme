@@ -29,25 +29,25 @@
 }
 
 @media only screen and (min-width: 1200px) {
-  .make-col-xl(@columns, @padding)  {
+  .make-col-xl(@columns, @padding:@baseSpacing)  {
     .make-col(@columns, @padding);
   }
 }
 
 @media only screen and (min-width: 1200px) {
-  .make-col-lg(@columns, @padding) {
+  .make-col-lg(@columns, @padding:@baseSpacing) {
     .make-col(@columns, @padding);
   }
 }
 
 @media only screen and (min-width: 767px) {
-  .make-col-md(@columns, @padding)  {
+  .make-col-md(@columns, @padding:@baseSpacing)  {
     .make-col(@columns, @padding);
   }
 }
 
 @media (max-width: 500px) {
-  .make-col-sm(@columns, @padding) {
+  .make-col-sm(@columns, @padding:@baseSpacing) {
     .make-col(@columns, @padding);
   }
 }

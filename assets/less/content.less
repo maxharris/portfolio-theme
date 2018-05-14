@@ -1,12 +1,32 @@
-body {
-  .text();
-  color: @text-color;
-}
-
 section {
   overflow: hidden;
-  padding: 0 (@baseSpacing * 2);
+  padding: (@baseSpacing * 2);
   position: relative;
   width: 100%;
 }
 
+.shape-wrap {
+	padding: 0;
+
+	.shape-vee {
+		background-color: @blue-dark;
+		-webkit-clip-path: polygon(50% 100%, 0 0, 100% 0);
+		clip-path: polygon(50% 100%, 0 0, 100% 0);
+		height: 160px;
+		margin-top: -1px;
+	}
+}
+
+.panel-list {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-between;
+
+	li {
+		background-color: @blue-dark;
+		color: @white;
+		flex: 0 1 32%;
+		margin-bottom: 2%;
+		padding: @baseSpacing;
+	}
+}

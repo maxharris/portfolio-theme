@@ -8,17 +8,9 @@
   <a href="<?php the_permalink(); ?>">
     <div class="image-wrapper">
       <?php the_post_thumbnail('article-thumb'); ?>
-      <div class="project-meta">
-        <h3>
-          <?php
-            $thetitle = $post->post_title;
-            $getlength = strlen($thetitle);
-            $thelength = 44;
-            echo substr($thetitle, 0, $thelength);
-            if ($getlength > $thelength) echo "... ";
-          ?>
-        </h3>
-      </div>
+    </div>
+    <div class="project-meta">
+      <h3 class="project-title"><?php the_title(); ?></h3>
     </div>
   </a>
 </li>

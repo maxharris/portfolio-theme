@@ -1,6 +1,13 @@
+body {
+  font: @font-size-md @font-family-body;
+  font-weight: @font-weight-light;
+  letter-spacing: @letter-spacing-body;
+  line-height: @line-height-body;
+  text-align: center;
+}
 
 h1, h2, h3, h4 {
-  .title()
+  .make-heading();
 }
 
 h1 {
@@ -8,16 +15,21 @@ h1 {
 }
 
 h2 {
-  color: @brand-color;
+  color: @brand-color-dark;
+  text-transform: uppercase;
 }
   
 h3 {
-  font-weight: @font-weight-light;
+  font-size: @font-size-lg;
   margin: 0 auto (@baseSpacing / 3);
 }
 
+.project-title {
+  .make-title();
+}
+
 p {
-  line-height: @line-height-text;
+  line-height: @line-height-body;
   margin: 0 auto @baseSpacing;
 }
 
@@ -35,15 +47,7 @@ a {
 
 button,
 a.btn {
-  background-color: @white;
-  border: @border-thick;
-  color: @black;
-  display: inline-block;
-  font: @font-size-button @font-family-button;
-  font-weight: @font-weight-heavy;
-  padding: @baseSpacing / 2;
-  text-transform: uppercase;
-  text-align: center;
+  .button();
 
   &:hover,
   &:active {

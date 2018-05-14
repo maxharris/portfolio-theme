@@ -1,27 +1,41 @@
-.text() {
-  font: @font-size-base @font-family-text;
-  font-weight: @font-weight-light;
-  letter-spacing: @letter-spacing-text;
-  line-height: @line-height-text;
+.make-title() {
+  font-family: @font-family-title;
+  font-size: @font-size-lg;
+  font-style: italic;
+  line-height: @line-height-title;
 }
 
-.title(@font-family:@font-family-title) {
-  font: @font-size-title @font-family;
-  font-weight: @font-weight-heavy;
-  letter-spacing: @letter-spacing-title;
-  margin-bottom: @baseSpacing / 2;
-  text-transform: uppercase;
+.make-heading() {
+  font-family: @font-family-heading;
+  line-height: @line-height-heading;
 }
 
-.make-col(@columns:@columns, @padding:@baseSpacing) {
+.make-col(@columns; @padding:@baseSpacing) {
 	float: left;
   padding: @padding;
   width: 100%*(@columns / @baseColumnCount);
 }
 
-.transition(@property, @speed:@transition-speed) {
+.push(@columns) {
+  margin-left: 100%*(@columns / @baseColumnCount);
+}
+
+.transition(@property; @speed:@transition-speed) {
 	transition: @property @speed ease-in;
 	will-change: @property;
+}
+
+.button(@margin:(@baseSpacing / 3)) {
+  border: 2px solid;
+  border-radius: 4px;
+  color: @white;
+  display: inline-block;
+  font: @font-size-button @font-family-button;
+  font-weight: @font-weight-heavy;
+  margin: @margin;
+  padding: (@baseSpacing / 2) @baseSpacing;
+  text-transform: uppercase;
+  text-align: center;
 }
 
 .fade-in() {
