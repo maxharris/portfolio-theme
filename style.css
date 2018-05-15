@@ -148,6 +148,12 @@ table {
 * {
   box-sizing: border-box;
 }
+section {
+  overflow: hidden;
+  padding: 60px;
+  position: relative;
+  width: 100%;
+}
 .container {
   margin: 0 auto;
   max-width: 100%;
@@ -157,7 +163,7 @@ table {
 }
 .container-fluid {
   overflow: hidden;
-  padding: 20px;
+  padding: 30px;
   width: 100%;
 }
 img {
@@ -165,8 +171,9 @@ img {
   max-width: 100%;
 }
 body {
-  font: 1.2rem "Lato", Geneva, Tahoma, sans-serif;
-  font-weight: 400;
+  color: #121212;
+  font: 18px "Lato", Geneva, Tahoma, sans-serif;
+  font-weight: 500;
   letter-spacing: 0.082rem;
   line-height: 1.6rem;
   text-align: center;
@@ -176,24 +183,34 @@ h2,
 h3,
 h4 {
   font-family: "Lato", Geneva, Tahoma, sans-serif;
-  line-height: 1.6rem;
+  font-size: 22px;
+  font-weight: 500;
+  line-height: 2.5rem;
+  text-transform: uppercase;
 }
 h1 {
   margin-top: 30px;
 }
-h2 {
-  color: #003c5a;
-  text-transform: uppercase;
-}
 h3 {
-  font-size: 2.4rem;
+  font-family: "Lato", Geneva, Tahoma, sans-serif;
+  font-size: 22px;
+  font-weight: 500;
+  line-height: 2.5rem;
+  text-transform: uppercase;
   margin: 0 auto 10px;
 }
+.page-title,
 .project-title {
   font-family: Cambria, "Hoefler Text", Utopia, "utopia-std-subhead", "Liberation Serif", "Nimbus Roman No9 L Regular", Times, "Times New Roman", serif;
-  font-size: 2.4rem;
+  font-size: 36px;
   font-style: italic;
-  line-height: 2.6rem;
+  font-weight: 500;
+  line-height: 3rem;
+}
+p.alt,
+a.alt {
+  font-family: Cambria, "Hoefler Text", Utopia, "utopia-std-subhead", "Liberation Serif", "Nimbus Roman No9 L Regular", Times, "Times New Roman", serif;
+  font-style: italic;
 }
 p {
   line-height: 1.6rem;
@@ -217,12 +234,17 @@ a.btn {
   border-radius: 4px;
   color: #ffffff;
   display: inline-block;
-  font: 1.2rem Cambria, "Hoefler Text", Utopia, "utopia-std-subhead", "Liberation Serif", "Nimbus Roman No9 L Regular", Times, "Times New Roman", serif;
+  font: 14px "Lato", Geneva, Tahoma, sans-serif;
   font-weight: 700;
+  letter-spacing: 0.182rem;
   margin: 10px;
   padding: 15px 30px;
   text-transform: uppercase;
   text-align: center;
+}
+button.alt,
+a.btn.alt {
+  color: #121212;
 }
 button:hover,
 a.btn:hover,
@@ -237,8 +259,13 @@ ul {
 ul li {
   list-style-type: none;
 }
+form {
+  position: relative;
+}
 label {
+  font-size: 14px;
   font-weight: 700;
+  margin-bottom: 15px;
   text-transform: uppercase;
 }
 input[type=text],
@@ -246,9 +273,10 @@ input[type=email],
 input[type=tel],
 select,
 textarea {
+  font-size: 18px;
   border: none;
-  border-radius: 3px;
-  margin-bottom: 30px;
+  border-radius: 4px;
+  margin: 0 0 10px;
   padding: 15px;
   width: 100%;
 }
@@ -266,40 +294,16 @@ input[type=submit] {
   border-radius: 4px;
   color: #ffffff;
   display: inline-block;
-  font: 1.2rem Cambria, "Hoefler Text", Utopia, "utopia-std-subhead", "Liberation Serif", "Nimbus Roman No9 L Regular", Times, "Times New Roman", serif;
+  font: 14px "Lato", Geneva, Tahoma, sans-serif;
   font-weight: 700;
+  letter-spacing: 0.182rem;
   margin: 0;
   padding: 15px 30px;
   text-transform: uppercase;
   text-align: center;
 }
-section {
-  overflow: hidden;
-  padding: 60px;
-  position: relative;
-  width: 100%;
-}
-.shape-wrap {
-  padding: 0;
-}
-.shape-wrap .shape-vee {
-  background-color: #003c5a;
-  -webkit-clip-path: polygon(50% 100%, 0 0, 100% 0);
-  clip-path: polygon(50% 100%, 0 0, 100% 0);
-  height: 160px;
-  margin-top: -1px;
-}
-.panel-list {
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: space-between;
-}
-.panel-list li {
-  background-color: #003c5a;
-  color: #ffffff;
-  flex: 0 1 32%;
-  margin-bottom: 2%;
-  padding: 30px;
+input[type=submit].alt {
+  color: #121212;
 }
 #header {
   transition: box-shadow 0.2s ease-in;
@@ -311,84 +315,157 @@ section {
   width: 100%;
   z-index: 900;
 }
-#header.sticky {
-  box-shadow: 0 0 6px -1px #333333;
-  top: 0;
-}
-#header.sticky .container-fluid .logo {
-  max-height: 100px;
-  width: 200px;
-}
 #header .container-fluid {
   padding: 15px 30px;
 }
 #header .container-fluid .logo {
-  transition: max-height 0.3s ease-in-out;
-  max-height: 0;
+  transition: margin-bottom 0.2s ease-in;
+  will-change: margin-bottom;
+  height: 40px;
+  transition: margin-bottom 0.3s ease-in;
+  margin-bottom: -100px;
+}
+#header.sticky {
+  box-shadow: 0 0 6px -1px #6b6b6b;
+  top: 0;
+}
+#header.sticky .container-fluid .logo {
+  margin-bottom: 0;
+  width: 200px;
 }
 .admin-bar #header {
   margin-top: 32px;
 }
 footer {
   background-color: black;
-  color: #ffffff;
+  color: #6b6b6b;
 }
-footer .flex-container {
-  padding: 30px;
+footer .container-fluid {
   position: relative;
 }
-footer .flex-container span {
+footer .container-fluid span {
+  font-size: 11px;
   text-transform: uppercase;
 }
-#section-bio {
+#section-home-header {
   background-color: #003c5a;
 }
-#section-bio * {
+#section-home-header * {
   color: #ffffff;
 }
-#section-bio .container {
+#section-home-header .container {
   float: left;
   padding: 30px;
   width: 66.66666667%;
   margin-left: 16.66666667%;
 }
-#section-bio .container .logo {
+#section-home-header .container .logo {
   margin-bottom: 30px;
   width: 320px;
+}
+.shape-wrap {
+  background-color: #ffe49e;
+  padding: 0;
+}
+.shape-wrap .shape-vee {
+  background-color: #003c5a;
+  -webkit-clip-path: polygon(50% 100%, 0 0, 100% 0);
+  clip-path: polygon(50% 100%, 0 0, 100% 0);
+  height: 160px;
+  margin-top: -1px;
+}
+#section-bio {
+  background-color: #ffe49e;
+  padding: 120px 0 0;
+}
+#section-bio img {
+  float: left;
+  padding: 0;
+  width: 41.66666667%;
+}
+#section-bio .text-wrap {
+  float: left;
+  padding: 60px;
+  width: 50%;
+  margin: 30px 10px;
+  padding-bottom: 0;
+  text-align: justify;
+}
+#section-services {
+  background-color: #003c5a;
+}
+#section-services h2 {
+  font-size: 48px;
+}
+#section-services .panel-list {
+  display: flex;
+  flex-flow: row wrap;
+  margin: 30px;
+  justify-content: space-between;
+}
+#section-services .panel-list li {
+  box-shadow: 0 0 6px -1px #6b6b6b;
+  border: 1px solid;
+  border-radius: 4px;
+  color: #ffffff;
+  flex: 0 1 32%;
+  margin-bottom: 2%;
+  padding: 30px;
+}
+#section-services .panel-list li svg {
+  font-size: 50px;
+  line-height: 1;
+  margin-bottom: 15px;
 }
 #section-portfolio {
   text-align: center;
 }
 #section-portfolio ul li {
-  float: left;
-  padding: 30px 0;
-  width: 100%;
-  margin-bottom: 30px;
+  align-items: center;
+  color: #121212;
+  display: flex;
+  flex-flow: row;
+  margin: 60px 0;
 }
-#section-portfolio ul li a .image-wrapper {
-  padding: 0;
-  width: 58.33333333%;
+#section-portfolio ul li .image-wrap {
+  box-shadow: 0 0 6px -1px #6b6b6b;
+  border-radius: 4px;
+  flex: 0 1 50%;
   float: left;
+  overflow: hidden;
   position: relative;
 }
-#section-portfolio ul li a .image-wrapper img {
+#section-portfolio ul li .image-wrap img {
+  transition: transform 0.2s ease-in;
+  will-change: transform;
   position: relative;
+  transform: scale(1);
   z-index: 100;
 }
+#section-portfolio ul li .image-wrap:hover img {
+  transform: scale(1.1);
+}
 #section-portfolio ul li .project-meta {
-  float: left;
-  padding: 30px;
-  width: 41.66666667%;
-  color: #111111;
+  flex: 0 1 50%;
+  padding: 60px;
+}
+#section-portfolio ul li .project-meta .btn {
+  color: #121212;
+  display: block;
+  margin: 30px auto;
+  width: 220px;
 }
 #section-portfolio ul li .project-meta h3 {
   margin-bottom: 0;
 }
-#section-portfolio ul li:nth-of-type(2n) .image-wrapper {
-  float: right;
+#section-portfolio ul li .project-meta h3:after {
+  display: block;
+  background-color: #121212;
+  height: 2px;
+  width: 300px;
 }
-#section-portfolio ul li:nth-of-type(2n) .image-wrapper .project-meta {
-  float: left;
+#section-portfolio ul li:nth-of-type(2n) .image-wrap {
+  order: 2;
 }
 #section-contact {
   background-color: #003c5a;
@@ -399,12 +476,27 @@ footer .flex-container span {
 }
 #section-contact form label {
   color: #ffffff;
+  line-height: 1.2rem;
+}
+#section-contact form input,
+#section-contact form textarea {
+  background-color: #f7f7f7;
+}
+#section-contact form input[type="submit"] {
+  background-color: #121212;
+  border-color: #121212;
+  bottom: 54px;
+  position: absolute;
+  right: 11.53846154px;
 }
 #section-contact form > div {
   float: left;
-  padding: 0;
+  padding: 10px;
   width: 50%;
 }
-#section-contact form > div::nth-child(2) {
-  padding-right: 30px;
+#section-contact form > div:nth-of-type(2) {
+  padding-left: 0;
+}
+#section-contact form > div:nth-of-type(3) {
+  padding-right: 0;
 }

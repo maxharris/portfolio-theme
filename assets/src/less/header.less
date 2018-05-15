@@ -1,0 +1,36 @@
+#header {
+  .transition(box-shadow);
+  background-color: @white;
+  box-shadow: transparent;
+  position: fixed;
+  top: -90px;
+  width: 100%;
+  z-index: 900;
+
+  .container-fluid {
+    padding: (@baseSpacing / 2) @baseSpacing;
+
+    .logo {
+      .transition(margin-bottom);
+      height: 40px;
+      transition: margin-bottom 0.3s ease-in;
+      margin-bottom: -100px;
+    }
+  }
+
+  &.sticky {
+    .box-shadow();
+    top: 0;
+
+    .container-fluid {
+      .logo {
+        margin-bottom: 0;
+        width: 200px;
+      }
+    }
+  }
+}
+
+.admin-bar #header {
+  margin-top: 32px; // Accounting for the WordPress admin bar when present
+}

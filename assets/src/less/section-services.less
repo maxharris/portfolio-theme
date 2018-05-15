@@ -1,0 +1,30 @@
+#section-services {
+	background-color: @brand-color-dark;
+
+	h2 {
+		font-size: @font-size-xxl;
+	}
+
+	.panel-list {
+		display: flex;
+		flex-flow: row wrap;
+		margin: @baseSpacing;
+		justify-content: space-between;
+
+		li {
+			.box-shadow();
+			border: 1px solid;
+			border-radius: @border-radius;
+			color: @white;
+			flex: 0 1 32%;
+			margin-bottom: 2%;
+			padding: @baseSpacing;
+
+			svg {
+				font-size: 50px;
+				line-height: 1;
+				margin-bottom: @baseSpacing / 2;
+			}
+		}
+	}
+}

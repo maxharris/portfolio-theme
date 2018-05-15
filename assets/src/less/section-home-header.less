@@ -1,0 +1,30 @@
+#section-home-header {
+	background-color: @blue-dark;
+
+	& * {
+		color: @white;
+	}
+
+	.container {
+		.make-col(8);
+		.push(2);
+
+		.logo {
+			margin-bottom: @baseSpacing;
+		  width: 320px;
+		}
+	}
+}
+
+.shape-wrap {
+	background-color: @yellow;
+	padding: 0;
+
+	.shape-vee {
+		background-color: @blue-dark;
+		-webkit-clip-path: polygon(50% 100%, 0 0, 100% 0);
+		clip-path: polygon(50% 100%, 0 0, 100% 0);
+		height: 160px;
+		margin-top: -1px;
+	}
+}

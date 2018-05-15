@@ -3,8 +3,8 @@
 <head>
 	<title><?php bloginfo('title'); ?></title>
 	
-	<meta name="description" content='JB the First Lady, is a Vancouver-based female hip-hop/spoken word artist, beat-boxer, cultural dancer and youth educator. She has released 3 solo albums, 1 mixtape and Entertribal album  to date, "Indigenous Love" (2008); "Get Ready, Get Steady" (2011) and "Indigenous Girl Lifestyle" (2014) and the 2015 IMA winning album "Indigenized: Hitting the trail" by Entertribal in collaboration with Chief Rock.'>
-  <meta name="keywords" content="jb the first lady, jerilynn webster,  music, music video, cancon, press, bio, media, album, hip-hop, hip hop, rap, rapper, singer, spoken word, female, native, indigenous, first nations, aboriginal, canada, canadian, west coast, native american, vancouver, british columbia, nuxalk, onadaga, tribal, pow wow, itunes, spotify, bandcamp, soundcloud, tidal, entertribal">
+	<meta name="description" content='....'>
+  <meta name="keywords" content="...">
 	<meta http-equiv="Content-Type" content="text/html" charset="utf-8">
 	<meta name="msapplication-TileColor" content="#ffffff">
 	<meta name="msapplication-TileImage" content="favicon/ms-icon-144x144.png">
@@ -27,7 +27,7 @@
 	<link rel="manifest" href="<?php echo get_stylesheet_directory_uri(); ?>/favicon/manifest.json">
 	
 	<script src="https://use.typekit.net/hve1nhf.js"></script>
-	<script>try{Typekit.load({ async: true });}catch(e){}</script>	
+	<script>try{Typekit.load({ async: true });}catch(e){}</script>
 
 	<?php wp_head(); ?>
 </head>

@@ -1,6 +1,6 @@
 <div class="clear-fix">
 <footer>
-  <div class="flex-container">
+  <div class="container-fluid">
     <?php get_sidebar('footer'); ?>
 
     <span class="copyright">

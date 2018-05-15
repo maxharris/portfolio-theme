@@ -11,27 +11,28 @@ module.exports = function(grunt) {
 					]
 				},
 				files: {
-					'style.css': 'assets/less/style.less'
+					'style.css': 'assets/src/less/style.less'
 				}
 			}
 		},
+
   	uglify: {
 	    build: {
-	      src: 'assets/js/src/*.js',
-	      dest: 'production-assets/js/min/scripts.min.js'
+	      src: 'assets/src/js/*.js',
+	      dest: 'assets/production-assets/js/scripts.min.js'
 	    }
 		},
 
 		watch: {
 			css: {
-				files: ['assets/less/*.less'],
+				files: ['assets/src/less/*.less'],
 				tasks: ['less'],
 				options: {
 					livereload: true
 				}
 			},
 			scripts: {
-				files: ['assets/js/*.js'],
+				files: ['assets/src/js/*.js'],
 				tasks: ['uglify'],
 				options: {
 					livereload: true

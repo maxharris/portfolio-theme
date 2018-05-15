@@ -1,18 +1,12 @@
 <section id="section-bio">
-	<div class="container">
-		<a class="logo" href="<?php echo esc_url( site_url( '/' ) ); ?>">
-			<img class="logo" src="<?php echo get_stylesheet_directory_uri(); ?>/images/max-harris-logo-white.svg">
-		</a>
-		<h2>Full stack web developer, based in San Francisco.</h2>
+	<img class="bio-image" src="<?php echo get_stylesheet_directory_uri(); ?>/images/max-header-bw.png">
+	<div class="text-wrap">
+		<h3>Hello!</h3>
 		<p>
-			If you would like to work with me, please drop me a line below.
+			My name is Max Harris, and I am a professional front-end developer based in San Francisco, California. I build marketing sites, e-commerce platforms, blogs, and applications for small businesses, startups, and non-profit organizations. I also teach WordPress fundamentals at General Assembly,The Academy of Art, and as a consultant.
 		</p>
-		<a href="/contact/" class="btn">Contact Me</a>
-		<div>
-			<a href="#">R&eacute;sum&eacute;</a>
-		</div>
+		<p>
+			My mission is to build and ship tools that revolutionize access to education, entrepreneurship, and political engagement. Ideally, I would like to lead front-end development for scalable, community-facing products in these areas. 
+		</p>
 	</div>
-</section>
-<section class="shape-wrap">
-	<div class="shape-vee"></div>
-</section>
+</section>	

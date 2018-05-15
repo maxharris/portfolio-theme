@@ -11,6 +11,7 @@
 <?php include_once(get_template_directory() . '/header.php') ?>
   <?php while ( have_posts() ) : the_post(); ?>
       <main id="main-content">
+        <?php include(get_template_directory() . '/sections/home-header.php'); ?>
         <?php include(get_template_directory() . '/sections/bio.php'); ?>
         <?php include(get_template_directory() . '/sections/services.php'); ?>
         <?php include(get_template_directory() . '/sections/portfolio.php'); ?>
