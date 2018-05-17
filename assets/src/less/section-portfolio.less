@@ -2,35 +2,27 @@
   text-align: center;
 
    ul li {
-    align-items: center;
-    color: @black;
-    display: flex;
-    flex-flow: row;
-    margin: (@baseSpacing * 2) 0;
+    .row(0);
 
     .image-wrap {
-      .box-shadow();
-      border-radius: @border-radius;
-      flex: 0 1 50%;
-      float: left;
-      overflow: hidden;
+      .make-col(6, 0 @baseSpacing);
       position: relative;
 
       img {
-        .transition(transform);
-        position: relative;
-        transform: scale(1);
-        z-index: 100;
+        .transition(opacity);
+        box-shadow: @boxShadow;
+        border-radius: @borderRadius;
+        opacity: 1;
       }
 
       &:hover img {
-        transform: scale(1.1);
+        opacity: 0.9;
       }
     }
   
     .project-meta {
-      flex: 0 1 50%;
-      padding: @baseSpacing * 2;
+      .make-col(6,  @baseSpacing (@baseSpacing * 2));
+      float: right;
 
       .btn {
         color: @black;
@@ -53,7 +45,11 @@
 
     &:nth-of-type(2n) {
       .image-wrap {
-        order: 2;
+        float: right;
+      }
+
+      .project-meta {
+        float: left;
       }
     }
   }

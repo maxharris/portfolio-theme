@@ -25,9 +25,6 @@
 	<link rel="icon" type="image/png" sizes="96x96" href="<?php echo get_stylesheet_directory_uri(); ?>/favicon/favicon-96x96.png">
 	<link rel="icon" type="image/png" sizes="16x16" href="<?php echo get_stylesheet_directory_uri(); ?>/favicon/favicon-16x16.png">
 	<link rel="manifest" href="<?php echo get_stylesheet_directory_uri(); ?>/favicon/manifest.json">
-	
-	<script src="https://use.typekit.net/hve1nhf.js"></script>
-	<script>try{Typekit.load({ async: true });}catch(e){}</script>
 
 	<?php wp_head(); ?>
 </head>

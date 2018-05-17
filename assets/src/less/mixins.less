@@ -1,4 +1,16 @@
 // Grid Mixins
+.row(@padding:@baseSpacing) {
+  padding-left: @padding;
+  padding-right: @padding;
+  width: 100%;
+
+  &::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+}
+
 .make-col(@columns; @padding:@baseSpacing) {
   float: left;
   padding: @padding;
@@ -23,12 +35,11 @@
   font-size: @font-size-lg;
   font-weight: @font-weight-medium;
   line-height: @line-height-heading;
-  text-transform: uppercase;
 }
 
 .button(@margin:(@baseSpacing / 3)) {
   border: 2px solid;
-  border-radius: @border-radius;
+  border-radius: @borderRadius;
   color: @white;
   display: inline-block;
   font: @font-size-button @font-family-button;
@@ -45,10 +56,6 @@
 }
 
 // Effects
-.box-shadow() {
-  box-shadow: 0 0 6px -1px @grey;
-}
-
 .transition(@property; @speed:@transition-speed) {
   transition: @property @speed ease-in;
   will-change: @property;

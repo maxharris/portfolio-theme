@@ -1,5 +1,5 @@
 #section-services {
-	background-color: @brand-color-dark;
+	background-color: @blue-dark;
 
 	h2 {
 		font-size: @font-size-xxl;
@@ -12,16 +12,18 @@
 		justify-content: space-between;
 
 		li {
-			.box-shadow();
+    	box-shadow: @boxShadow;
+			background-color: @white;
 			border: 1px solid;
-			border-radius: @border-radius;
-			color: @white;
+			border-radius: @borderRadius;
+			color: @black;
 			flex: 0 1 32%;
 			margin-bottom: 2%;
 			padding: @baseSpacing;
 
 			svg {
-				font-size: 50px;
+				color: @blue;
+				font-size: 46px;
 				line-height: 1;
 				margin-bottom: @baseSpacing / 2;
 			}

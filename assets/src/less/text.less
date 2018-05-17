@@ -8,7 +8,7 @@ body {
 }
 
 h1, h2, h3, h4 {
-  .make-heading();
+  // .make-heading();
 }
 
 h1 {
@@ -42,6 +42,10 @@ p {
   margin: 0 auto @baseSpacing;
 }
 
+strong {
+  font-weight: @font-weight-heavy;
+}
+
 a {
   .transition(color);
   .transition(background-color);
@@ -57,19 +61,18 @@ a {
 button,
 a.btn {
   .button();
+  cursor: pointer;
 
   &:hover,
   &:active {
-    color: lighten(@link-color, %7);
+    background-color: @yellow;
   }
 }
 
 ul {
-  overflow: hidden;
   padding-left: 0;
 
   li {
     list-style-type: none;
   }
 }
-

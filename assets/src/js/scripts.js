@@ -2,7 +2,7 @@
 jQuery(document).ready(function( $ ){
   $(function() {
     var $header = $('#header');
-    var snap = 70;
+    var snap = 60;
     var $window = $(window);
 
     $window.on('scroll', _.throttle(function() {

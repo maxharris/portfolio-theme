@@ -19,20 +19,8 @@ section {
 
 .container-fluid {
   overflow: hidden;
-  padding: @baseSpacing;
+  padding: (@baseSpacing / 2) @baseSpacing;
   width: 100%;
-}
-
-.row(@padding:@basSpacing) {
-  padding-left: @basSpacing;
-  padding-right: @basSpacing;
-  width: 100%;
-
-  &::after {
-    content: "";
-    clear: both;
-    display: table;
-  }
 }
 
 @media only screen and (min-width: 1200px) {

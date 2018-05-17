@@ -19,7 +19,7 @@
 @grey-light: lighten(@grey, 55%);
 @grey-dark: darken(@grey, 22%);
 @white: #FFFFFF;
-@yellow: lighten(#FFB800, 31%);
+@yellow: lighten(#FFB800, 15%);
 
 @brand-color: @blue;
 @brand-color-dark: @blue-dark;
@@ -29,8 +29,8 @@
 @link-color: @brand-color;
 
 // Text Base
-@font-family-serif: Cambria, "Hoefler Text", Utopia, "utopia-std-subhead", "Liberation Serif", "Nimbus Roman No9 L Regular", Times, "Times New Roman", serif;
-@font-family-sans-serif: "Lato", Geneva, Tahoma, sans-serif;
+@font-family-serif: "utopia-std-subhead", Utopia, Cambria, "Hoefler Text", "Liberation Serif", "Nimbus Roman No9 L Regular", Times, "Times New Roman", serif;
+@font-family-sans-serif: "lato", Geneva, Tahoma, sans-serif;
 
 @font-size-base: 18px;
 
@@ -61,10 +61,11 @@
 @line-height-heading: 2.5rem;
 @line-height-body: 1.6rem;
 
-
 // Borders
-@border-radius: 4px;
-@border-radius-lg: 8px;
+@borderRadius: 3px;
+@borderRadius-lg: 8px;
 
 // Transitions
 @transition-speed: 0.2s;
+
+@boxShadow: 0 0 6px -1px @grey;

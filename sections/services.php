@@ -1,9 +1,8 @@
 <section id="section-services">
 	<div class="flex-container">
-		<!-- <h2>Services</h2> -->
 		<ul class="panel-list">
 			<li>
-				<i class="fas fa-code"></i>
+				<i class="fas fa-terminal"></i>
 				<h3>Full Stack Development</h3>
 				<span>
 					Vestibulum ex diam, tincidunt sed tellus eu, posuere pellentesque metus. Vivamus commodo lectus porttitor purus rutrum.
@@ -34,7 +33,7 @@
 				<i class="fas fa-at"></i>
 				<h3>Email Marketing</h3>
 				<span>
-					Vestibulum ex diam, tincidunt sed tellus eu, posuere pellentesque metus. Vivamus commodo lectus porttitor purus rutrum.
+					Whether you are using 
 				</span>
 			</li>
 			<li>
