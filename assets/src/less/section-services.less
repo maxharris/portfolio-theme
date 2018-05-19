@@ -8,14 +8,14 @@
 	.panel-list {
 		display: flex;
 		flex-flow: row wrap;
-		margin: @baseSpacing;
+		margin-top: @baseSpacing;
+		padding: @baseSpacing;
 		justify-content: space-between;
 
 		li {
-    	box-shadow: @boxShadow;
 			background-color: @white;
-			border: 1px solid;
 			border-radius: @borderRadius;
+    	box-shadow: @boxShadow;
 			color: @black;
 			flex: 0 1 32%;
 			margin-bottom: 2%;
@@ -23,10 +23,26 @@
 
 			svg {
 				color: @blue;
-				font-size: 46px;
+				font-size: @font-size-xxl;
 				line-height: 1;
 				margin-bottom: @baseSpacing / 2;
 			}
+
+			span {
+				font-size: @font-size-sm;
+				line-height: @line-height-sm;
+			}
+		}
+	}
+}
+
+@media @maxPhone {
+	#section-services .panel-list {
+		padding: 0;
+
+		li {
+			border: 1px solid red !important;
+			flex: 1 3 100%;
 		}
 	}
 }

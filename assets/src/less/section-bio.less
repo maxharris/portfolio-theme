@@ -2,25 +2,38 @@
 	background-color: @blue-dark;
 	padding: (@baseSpacing * 4) 0 0;
 
-	img {
-		.make-col(5, 0);
-	}
-
-	.text-wrap {
-		.make-col(6, (@baseSpacing * 2) );
-		margin: @baseSpacing (@baseSpacing / 3);
+	.container-fluid {
+		display: flex;
+		overflow: visible;
 		padding-bottom: 0;
-		text-align: justify;
 
-		p,
-		strong {
-			color: @white;
+		.image-wrap {
+			flex: 0 1 40%;
+			position: relative;
+
+			img {
+				bottom: 0;
+				left: 0;
+				position: absolute;
+			}
 		}
 
-		strong {
-			display: block;
-			font-size: @font-size-xl;
-			margin-bottom: @baseSpacing / 2;
+		.text-wrap {
+			flex: 0 1 50%;
+			overflow: hidden;
+			padding: 0 (@baseSpacing * 2) (@baseSpacing * 3);
+			text-align: justify;
+
+			p,
+			strong {
+				color: @white;
+			}
+
+			strong {
+				display: block;
+				font-size: @font-size-xl;
+				margin-bottom: @baseSpacing / 2;
+			}
 		}
 	}
 }

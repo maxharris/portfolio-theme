@@ -62,10 +62,16 @@ button,
 a.btn {
   .button();
   cursor: pointer;
+  display: block;
+  line-height: @line-height-btn;
+  margin: @baseSpacing auto 0;
+  position: relative;
+  width: 220px;
 
-  &:hover,
-  &:active {
-    background-color: @yellow;
+  .svg-inline--fa {
+    font-size: @font-size-lg;
+    left: @baseSpacing;
+    position: absolute;
   }
 }
 

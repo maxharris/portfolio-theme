@@ -1,13 +1,25 @@
 footer {
-  background-color: black;
+  background-color: @black;
   color: @grey;
 
   .container-fluid {
+  	padding-bottom: @baseSpacing / 2;
     position: relative;
+
+    a {
+    	color: @grey;
+    }
 
     span {
     	font-size: @font-size-xs;
+    	display: block;
+    	margin-top: @baseSpacing / 2;
       text-transform: uppercase;
+
+      .svg-inline--fa {
+    		font-size: @font-size-sm;
+    		margin-right: 0;
+      }
     }
   }
 }

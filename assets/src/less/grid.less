@@ -4,7 +4,7 @@
 
 section {
   overflow: hidden;
-  padding: (@baseSpacing * 2);
+  padding: (@baseSpacing * 2) @baseSpacing;
   position: relative;
   width: 100%;
 }
@@ -12,37 +12,50 @@ section {
 .container {
   margin: 0 auto;
   max-width: 100%;
-  overflow: auto;
   position: relative;
   width: @container-width;
 }
 
 .container-fluid {
   overflow: hidden;
-  padding: (@baseSpacing / 2) @baseSpacing;
+  padding: @baseSpacing 0;
   width: 100%;
 }
 
-@media only screen and (min-width: 1200px) {
-  .make-col-xl(@columns, @padding:@baseSpacing)  {
-    .make-col(@columns, @padding);
+.cta-wrap {
+  .make-col-lg(8, 0, @push: 2);
+}
+
+@media @maxPhone {
+  section {
+    padding: @baseSpacing;
   }
 }
 
-@media only screen and (min-width: 1200px) {
-  .make-col-lg(@columns, @padding:@baseSpacing) {
+.make-col-xl(@columns, @padding:@baseSpacing, @push:0) {
+  @media @maxDesktopLg {
     .make-col(@columns, @padding);
+    .push(@push)
   }
 }
 
-@media only screen and (min-width: 767px) {
-  .make-col-md(@columns, @padding:@baseSpacing)  {
+.make-col-lg(@columns, @padding:@baseSpacing, @push:0) {
+  @media @maxDesktop  {
     .make-col(@columns, @padding);
+    .push(@push)
   }
 }
 
-@media (max-width: 500px) {
-  .make-col-sm(@columns, @padding:@baseSpacing) {
+.make-col-md(@columns, @padding:@baseSpacing, @push:0) {
+  @media @maxTablet {
     .make-col(@columns, @padding);
+    .push(@push)
+  }
+}
+
+.make-col-sm(@columns, @padding:@baseSpacing, @push:0) {
+  @media @maxPhoneSm {
+    .make-col(@columns, @padding);
+    .push(@push)
   }
 }

@@ -12,9 +12,9 @@
 
     .logo {
       .transition(margin-bottom);
-      height: 40px;
-      transition: margin-bottom 0.3s ease-in;
-      margin-bottom: -100px;
+      // height: 40px;
+      // transition: margin-bottom 0.3s ease-in;
+      margin-bottom: -90px;
     }
   }
 
@@ -25,12 +25,14 @@
     .container-fluid {
       .logo {
         margin-bottom: 0;
-        width: 200px;
+        width: 220px;
       }
     }
   }
 }
 
-.admin-bar #header {
-  margin-top: 32px; // Accounting for the WordPress admin bar when present
+@media @minPhone {
+  .admin-bar #header {
+    margin-top: 32px; // Accounting for the WordPress admin bar when present
+  }
 }

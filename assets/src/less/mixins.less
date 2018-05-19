@@ -37,11 +37,12 @@
   line-height: @line-height-heading;
 }
 
-.button(@margin:(@baseSpacing / 3)) {
-  border: 2px solid;
+.button(@color:@black; @margin:(@baseSpacing / 3)) {
+  background-color: @white;
+  border: 2px solid @color;
   border-radius: @borderRadius;
-  color: @white;
-  display: inline-block;
+  color: @color;
+  cursor: pointer;
   font: @font-size-button @font-family-button;
   font-weight: @font-weight-heavy;
   letter-spacing: @letter-spacing-title;
@@ -50,8 +51,10 @@
   text-transform: uppercase;
   text-align: center;
 
-  &.alt {
-    color: @black;
+  &:hover,
+  &:active {
+    background-color: @black;
+    color: @white;
   }
 }
 
