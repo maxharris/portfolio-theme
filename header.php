@@ -35,5 +35,13 @@
 		<a href="<?php echo esc_url( site_url( '/' ) ); ?>">
 			<img class="logo" src="<?php echo get_stylesheet_directory_uri(); ?>/images/max-harris-logo.svg">
 		</a>
+		<?php 
+			if ( (is_page() && ! is_front_page()) || is_single()) {
+				echo '<h2>' . get_the_title() . '</h2>';
+			}
+			elseif (is_archive()) {
+				echo '<h2>' . single_term_title( ' ', $title) . ' Projects</h2>';
+			}
+		?>
 	</div>
 </header>

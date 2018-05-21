@@ -1,0 +1,73 @@
+.home {
+	text-align: center;
+
+	#header {
+	  top: -90px;
+
+	  .container-fluid .logo {
+	    left: auto;
+			margin-bottom: -90px;
+	    position: relative;
+	  }
+	}
+}
+
+#section-home-header {
+	.container {
+		.make-col(10);
+		.make-col-sm(12, 0);
+		.push(1);
+
+		.logo {
+			margin-bottom: @baseSpacing / 2;
+		  width: 320px;
+		}
+
+		h3 {
+			font-weight: @font-weight-heavy;
+			text-transform: uppercase;
+
+			&:after {
+				margin: @baseSpacing auto;
+				width: 320px;
+			}
+		}
+
+		span {
+			display: block;
+			font-size: @font-size-lg;
+		}
+	}
+}
+
+.shape-wrap {
+	background-color: @blue-dark;
+	padding: 0;
+
+	.shape-vee {
+		background-color: @white;
+		-webkit-clip-path: polygon(50% 100%, 0 0, 100% 0);
+		clip-path: polygon(50% 100%, 0 0, 100% 0);
+		height: 220px;
+		margin-top: -1px;
+	}
+}
+
+@media @maxTablet {
+	#section-home-header .container {
+		padding: 0;
+		
+		 span {
+			font-size: @font-size-md;
+		}
+	}
+
+	.shape-wrap	.shape-vee {
+		height: 70px;
+	}
+}
+
+@import "section-bio";
+@import "section-services";
+@import "section-portfolio";
+@import "section-contact";

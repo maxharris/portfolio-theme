@@ -1,0 +1,21 @@
+.page-header {
+  text-align: center;
+  margin-top: @baseSpacing * 2;
+  padding: @baseSpacing;
+}
+
+.page-content {
+  .make-col(12, (@baseSpacing * 2) @baseSpacing (@baseSpacing * 3));
+  .make-col-md(12, 0);
+}
+
+.page-title,
+.project-title {
+  .make-title();
+}
+
+.page-title {
+  font-size: @font-size-xxl;
+  line-height: @line-height-title;
+  margin: 0 auto @baseSpacing;
+}

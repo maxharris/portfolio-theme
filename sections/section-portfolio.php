@@ -7,9 +7,8 @@
 			$the_query = new WP_Query( $args ); 
 		?>
 		<?php if ( $the_query->have_posts() ) : ?>
-			<ul class="list">
+			<ul>
 			<?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
-
 				<?php get_template_part( '/partials/post', 'project'); ?>
 				<?php wp_reset_postdata(); ?>
 			<?php endwhile; ?>

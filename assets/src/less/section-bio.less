@@ -8,6 +8,8 @@
 		padding-bottom: 0;
 
 		.image-wrap {
+			.make-col(6, 0);
+			.make-col-sm(12, @baseSpacing);
 			flex: 0 1 40%;
 			position: relative;
 
@@ -19,20 +21,50 @@
 		}
 
 		.text-wrap {
+			.make-col(6, @baseSpacing (@baseSpacing * 2) (@baseSpacing * 4));
+			.make-col-sm(12, @baseSpacing);
 			flex: 0 1 50%;
 			overflow: hidden;
-			padding: 0 (@baseSpacing * 2) (@baseSpacing * 3);
-			text-align: justify;
 
 			p,
 			strong {
 				color: @white;
+				text-align: left;
 			}
 
 			strong {
 				display: block;
 				font-size: @font-size-xl;
 				margin-bottom: @baseSpacing / 2;
+			}
+		}
+	}
+}
+
+@media @maxTablet {
+	#section-bio {
+		padding-top: @baseSpacing;
+
+		.container-fluid {
+			flex-flow: column;
+
+			.image-wrap {
+				flex: 0 2 50%;
+
+				img {
+					background-color: @white;
+					border: 2px solid @white;
+					border-radius: 50%;
+					height: 220px;
+					margin: @baseSpacing auto;
+					position: relative;
+					width: 220px;
+				}
+			}
+
+			.text-wrap {
+				flex: 0 2 100%;
+				padding: 0 @baseSpacing (@baseSpacing * 3);
 			}
 		}
 	}

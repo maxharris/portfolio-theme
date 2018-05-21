@@ -1,43 +1,32 @@
 #section-portfolio {
   text-align: center;
 
-   ul li {
+   .container-fluid > ul > li {
     .row(0);
-    margin: @baseSpacing 0;
+    margin: (@baseSpacing * 2) 0;
 
     .image-wrap {
       .make-col(6, 0 @baseSpacing);
-      .make-col-sm(12, 0);
+      .make-col-md(12, 0);
       position: relative;
 
       img {
-        .transition(opacity);
-        // border-radius: @borderRadius;
-        box-shadow: @boxShadow;
-        margin-bottom: @baseSpacing / 3;
-        opacity: 1;
-      }
-
-      &:hover img {
-        opacity: 0.9;
+        box-shadow: @box-shadow;
       }
     }
   
     .project-meta {
-      .make-col(6,  @baseSpacing (@baseSpacing * 2));
-      .make-col-sm(12, 0);
+      .make-col(6,  @baseSpacing);
+      .make-col-md(12, 0 (@baseSpacing / 2));
 
-      h3 {
-        // margin-bottom: 0;
+      h3:after {
+        display: none;
+        margin-top: @baseSpacing / 2;
+      }
 
-        &::after {
-          background-color: @blue;
-          content: " ";
-          display: block;
-          height: 2px;
-          margin: @baseSpacing auto (@baseSpacing / 2);
-          width: 60px;
-        }
+      span {
+        display: inline-block;
+        padding: 0 (@baseSpacing * 3) (@baseSpacing / 3);
       }
     }
 
@@ -49,6 +38,55 @@
       .project-meta {
         float: left;
       }
+    }
+
+    &:first-of-type {
+      margin-top: @baseSpacing / 2;
+    }
+
+    &:last-of-type {
+      margin-bottom: @baseSpacing;
+    }
+  }
+}
+
+.section-portfolio,
+#section-portfolio { 
+  ul li .project-meta {
+  text-align: center;
+  
+    h3 {
+      line-height: @line-height-heading;
+      text-transform: none;
+    }
+
+    .btn {
+      font-size: @font-size-sm;
+      padding: @baseSpacing / 3;
+      width: 170px;
+    }
+  }
+}
+
+@media @maxPhone {
+  .section-portfolio,
+  #section-portfolio { 
+    .container-fluid ul > li .project-meta span {
+      padding: 0;
+    }
+  }
+}
+
+@media @maxTablet {
+  #section-portfolio ul li {
+    margin: (@baseSpacing * 2) 0;
+
+    .image-wrap img {
+      margin-bottom: @baseSpacing / 2;
+    }
+
+    .btn {
+      padding: @baseSpacing / 2;
     }
   }
 }

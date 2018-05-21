@@ -1,13 +1,13 @@
 // Media Sizes
-@maxDesktopLg: ~"only screen and (min-width 1800px)";
-@minDesktop: ~"only screen and (min-width 1200px)";
-@minTablet: ~"only screen and (min-width 900px)";
-@minPhone: ~"only screen and (min-width 600px)";
+@maxDesktopLg: ~"only screen and (min-width: 1800px)";
+@minDesktop: ~"only screen and (min-width: 1200px)";
+@minTablet: ~"only screen and (min-width: 900px)";
+@minPhone: ~"only screen and (min-width: 600px)";
 
-@maxDesktop: ~"only screen and (max-width 1799px)";
-@maxTablet: ~"only screen and (max-width 1199px)";
-@maxPhone: ~"only screen and (max-width 899px)";
-@maxPhoneSm: ~"only screen and (max-width 599px)";
+@maxDesktop: ~"only screen and (max-width: 1799px)";
+@maxTablet: ~"only screen and (max-width: 1199px)";
+@maxPhone: ~"only screen and (max-width: 899px)";
+@maxPhoneSm: ~"only screen and (max-width: 599px)";
 
 // Grid
 @container-width: 1200px;
@@ -20,7 +20,7 @@
 // @blue-dark: #003C5A;
 @blue-dark: darken(@blue, 30%);
 @grey: #6B6B6B;
-@grey-light: lighten(@grey, 55%);
+@grey-light: lighten(@grey, 48%);
 @grey-dark: darken(@grey, 22%);
 @white: #FFFFFF;
 @yellow: lighten(#FFB800, 22%);
@@ -38,7 +38,7 @@
 
 @font-size-base: 18px;
 
-@font-size-xxl: 48px;
+@font-size-xxl: 58px;
 @font-size-xl: 36px;
 @font-size-lg: 22px;
 @font-size-md: @font-size-base;
@@ -46,7 +46,7 @@
 @font-size-xs: 11px;
 
 // Buttons
-@font-size-icon: @font-size-xxl;
+@font-size-icon: 80px;
 @font-size-button: @font-size-sm;
 
 @font-weight-light: 300;
@@ -62,9 +62,9 @@
 @letter-spacing-body: 0.082rem;
 @letter-spacing-title: 0.182rem;
 
-@line-height-title: 1.9rem;
-@line-height-heading: 2.5rem;
-@line-height-body: 1.6rem;
+@line-height-title: 3.2rem;
+@line-height-heading: 2rem;
+@line-height-body: 1.8rem;
 @line-height-btn: 1.4rem;
 @line-height-sm: 0.6rem;
 
@@ -73,6 +73,7 @@
 @borderRadius-lg: 8px;
 
 // Transitions
-@transition-speed: 0.2s;
+@transition-speed: 0.12s;
 
-@boxShadow: 0 0 6px -1px @grey;
+@box-shadow: 0 0 6px -1px @grey;
+@box-shadow-vertical: 0px 4px 10px -4px @grey;

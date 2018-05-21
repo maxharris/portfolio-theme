@@ -1,17 +1,19 @@
 <?php include_once("header.php") ?>
   
-<main id="content">
- <section>
+<main id="main-content">
+ <section class="page-section">
   <div class="container">
     <?php
-     while ( have_posts() ) : the_post(); ?> <!--Because the_content() works only inside a WP Loop -->
-          <div class="entry-content-page">
-              <h2 class="title"><?php the_title(); ?></h2> <!-- Page Content -->
-              <?php the_content(); ?> <!-- Page Content -->
+     while ( have_posts() ) : the_post(); ?>
+        <div class="entry-content-page">
+          <div class="page-header">
+            <h2 class="page-title"><?php the_title(); ?></h2>
           </div>
+          <?php the_content(); ?>
+        </div>
       <?php
-      endwhile; //resetting the page loop
-      wp_reset_query(); //resetting the page query
+      endwhile;
+      wp_reset_query();
     ?>
   </div>
  </section>

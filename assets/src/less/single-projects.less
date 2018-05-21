@@ -1,0 +1,48 @@
+.section-portfolio {
+	padding: @baseSpacing;
+
+	.container {
+		padding-top: 0;
+
+		.page-content {
+  		.make-col(12, (@baseSpacing * 2) (@baseSpacing * 3) (@baseSpacing * 3));
+  		box-shadow: @box-shadow-vertical;
+  		margin-bottom: @baseSpacing * 3;
+
+			p {
+				margin: 0 @baseSpacing (@baseSpacing * 3);
+			}
+
+			img {
+				box-shadow: @box-shadow-vertical;
+				display: block;
+				margin: (@baseSpacing * 2) auto;
+			}
+
+			.wp-caption  {
+				margin: 0 auto (@baseSpacing * 2);
+				text-align: center;
+				width: 100%;
+
+				img {
+					margin: @baseSpacing auto (@baseSpacing / 5);
+				}
+
+				.wp-caption-text {
+					color: @grey;
+					font-style: italic;
+				}
+			}
+		}
+	}
+}
+
+@media @maxTablet {
+	.section-portfolio .container {
+		padding: 0;
+
+		.page-content {
+			padding: @baseSpacing / 5;
+		}
+	}
+}

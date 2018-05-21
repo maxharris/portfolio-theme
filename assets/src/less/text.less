@@ -4,7 +4,6 @@ body {
   font-weight: @font-weight-medium;
   letter-spacing: @letter-spacing-body;
   line-height: @line-height-body;
-  text-align: center;
 }
 
 h1, h2, h3, h4 {
@@ -21,12 +20,24 @@ h2 {
   
 h3 {
   .make-heading();
+  font-weight: @font-weight-heavy;
   margin: 0 auto (@baseSpacing / 3);
+  text-transform: uppercase;
+
+    &::after {
+    background-color: @blue;
+    content: " ";
+    display: block;
+    height: 2px;
+    margin: (@baseSpacing / 2) auto;
+    width: 60px;
+  }
 }
 
-.page-title,
-.project-title {
-  .make-title();
+h4 {
+  font-family: @font-family-serif;
+  font-size: @font-size-lg;
+  font-style: italic;
 }
 
 p,
@@ -61,12 +72,6 @@ a {
 button,
 a.btn {
   .button();
-  cursor: pointer;
-  display: block;
-  line-height: @line-height-btn;
-  margin: @baseSpacing auto 0;
-  position: relative;
-  width: 220px;
 
   .svg-inline--fa {
     font-size: @font-size-lg;
@@ -82,3 +87,22 @@ ul {
     list-style-type: none;
   }
 }
+
+ul.tags {
+  margin-bottom: @baseSpacing / 3;
+
+  li {
+    // color: @grey;
+    display: inline;
+    font-family: @font-family-serif;
+    font-style: italic;
+    margin: @baseSpacing / 5;
+  }
+}
+
+@media @maxPhone {
+  p {
+    text-align: left;
+  }
+}
+

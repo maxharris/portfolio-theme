@@ -28,6 +28,7 @@
   font-style: italic;
   font-weight: @font-weight-medium;
   line-height: @line-height-title;
+  text-align: center;
 }
 
 .make-heading() {
@@ -35,26 +36,29 @@
   font-size: @font-size-lg;
   font-weight: @font-weight-medium;
   line-height: @line-height-heading;
+  text-align: center;
 }
 
-.button(@color:@black; @margin:(@baseSpacing / 3)) {
-  background-color: @white;
-  border: 2px solid @color;
-  border-radius: @borderRadius;
+.button(@color:@white; @margin:(@baseSpacing / 2) auto 0 ) {
+  .transition(background-color);
+  background-color: @black;
   color: @color;
   cursor: pointer;
+  display: block;
   font: @font-size-button @font-family-button;
-  font-weight: @font-weight-heavy;
+  font-weight: @font-weight-light;
   letter-spacing: @letter-spacing-title;
+  line-height: @line-height-btn;
   margin: @margin;
+  max-width: 200px;
   padding: (@baseSpacing / 2) @baseSpacing;
-  text-transform: uppercase;
+  position: relative;
   text-align: center;
+  text-transform: uppercase;
 
   &:hover,
   &:active {
-    background-color: @black;
-    color: @white;
+    background-color: @link-color;
   }
 }
 

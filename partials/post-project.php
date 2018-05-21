@@ -1,6 +1,6 @@
 <?php
 /**
- * Partial: Press archive list item
+ * Partial: Project archive list item
  */
 ?>
 
@@ -12,6 +12,9 @@
   </div>
   <div class="project-meta">
     <h3 class="project-title"><?php the_title(); ?></h3>
-    <span><?php echo get_excerpt(130); ?></span>
+    	<ul class="tags">
+				<?php the_terms( $post->ID, 'project-types', '<li>', ' &middot; ', '</li> ' ); ?>
+			</ul>
+    <span><?php echo get_excerpt(120); ?></span>
   </div>
 </li>

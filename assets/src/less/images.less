@@ -7,3 +7,15 @@ img {
   font-size: @font-size-xl;
   margin: 0 (@baseSpacing / 10);
 }
+
+a {
+	img,
+	svg {
+    .transition(opacity);
+    opacity: 1;
+
+    &:hover {
+			opacity: 0.8;
+    }
+	}
+}

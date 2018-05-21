@@ -12,6 +12,8 @@ section {
 .container {
   margin: 0 auto;
   max-width: 100%;
+  overflow: hidden;
+  padding: @baseSpacing;
   position: relative;
   width: @container-width;
 }
@@ -24,11 +26,16 @@ section {
 
 .cta-wrap {
   .make-col-lg(8, 0, @push: 2);
+  .make-col-md(12, 0);
 }
 
-@media @maxPhone {
+@media @maxPhoneSm {
   section {
-    padding: @baseSpacing;
+    padding: @baseSpacing / 2;
+    
+    .container {
+      padding: @baseSpacing / 2;
+    }
   }
 }
 
@@ -54,6 +61,13 @@ section {
 }
 
 .make-col-sm(@columns, @padding:@baseSpacing, @push:0) {
+  @media @maxPhone {
+    .make-col(@columns, @padding);
+    .push(@push)
+  }
+}
+
+.make-col-xs(@columns, @padding:@baseSpacing, @push:0) {
   @media @maxPhoneSm {
     .make-col(@columns, @padding);
     .push(@push)

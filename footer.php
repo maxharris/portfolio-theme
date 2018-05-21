@@ -1,11 +1,11 @@
 <div class="clear-fix">
 <footer>
-  <div class="container-fluid">
+  <div class="container">
   	<div>
 	  	<a href="https://github.com/maxharris/" target="_blank">
 	  		<i class="fab fa-github"></i>
 	  	</a>
-	  	<a href="https://www.linkedin.com/in/maxrharris/">
+	  	<a href="https://www.linkedin.com/in/maxrharris/" target="_blank">
 		  	<i class="fab fa-linkedin"></i>
 		  </a>
 		</div>

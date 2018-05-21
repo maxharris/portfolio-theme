@@ -1,9 +1,10 @@
 footer {
   background-color: @black;
   color: @grey;
+  text-align: center;
 
-  .container-fluid {
-  	padding-bottom: @baseSpacing / 2;
+  .container {
+  	padding: @baseSpacing (@baseSpacing / 2) (@baseSpacing / 2);
     position: relative;
 
     a {
@@ -11,7 +12,7 @@ footer {
     }
 
     span {
-    	font-size: @font-size-xs;
+    	font-size: @font-size-sm;
     	display: block;
     	margin-top: @baseSpacing / 2;
       text-transform: uppercase;

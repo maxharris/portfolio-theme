@@ -1,39 +1,108 @@
+.page-contact .page-section,
 #section-contact {
 	background-color: @blue-dark;
-	text-align: left;
+	padding: @baseSpacing * 2;
+	color: @white;
 
-	form {
-	  max-width: 600px;
+	> p {
+		margin-bottom: @baseSpacing;
+		text-align: center;
+	}
 
-	  label {
-	  	color: @white;
-	  	line-height: 1.2rem;
-	  }
+	.form-wrap {
+	  .make-col(8, @baseSpacing (@baseSpacing * 2));
+	  .make-col-md(12, 0 (@baseSpacing / 2));
+	  .push(2);
 
-	  input,
-	  textarea { 
-			background-color: @grey-light;
-	  }
+	  .contact-info {
+	  	border-bottom: 1px solid @white;
+	  	padding-bottom: @baseSpacing / 3;
+	  	margin-bottom: @baseSpacing;
+	  	text-align: center;
 
-	  input[type="submit"] {
-	  	background-color: @black;
-	  	border-color: @black;
-	  	bottom: @baseSpacing * 1.8;
-	  	position: absolute;
-	  	right: @baseSpacing / 2.6;
-	  }
+		  ul li {
+		  	display: inline;
+		  	font-size: @font-size-sm;
+		  	margin: 0 (@baseSpacing / 3);
 
-		> div {
-		  .make-col(6, (@baseSpacing / 3));
-
-			&:nth-of-type(2) { padding-left: 0; }
-		  &:nth-of-type(3) { padding-right: 0;}
+		  	.svg-inline--fa {
+	    		font-size: @font-size-sm;
+		  	}
+		  }
 		}
 
-		div.wpcf7-validation-errors,
-		div.wpcf7-acceptance-missing {
-			border: 2px solid @white;
-			color: @white;
+	  form {
+	  	text-align: left;
+
+		  p label {
+		  	line-height: 1.2rem;
+		  }
+
+		  input,
+		  textarea { 
+				background-color: @grey-light;
+		  }
+
+		  input[type="submit"] {
+		  	.transition(background-color);
+		  	background-color: @black;
+		  	bottom: @baseSpacing * 1.8;
+		  	color: @white;
+		  	position: absolute;
+		  	right: @baseSpacing / 2.6;
+
+
+		  	&:hover {
+		  		background-color: @blue-dark;
+		  		border-color: @blue-dark;
+		  	}
+		  }
+
+			> div {
+			  .make-col(6, (@baseSpacing / 3));
+
+				&:nth-of-type(2) { padding-left: 0; }
+			  &:nth-of-type(3) { padding-right: 0;}
+			}
+
+			div.wpcf7-validation-errors,
+			div.wpcf7-acceptance-missing {
+				border: 2px solid @yellow;
+				margin: 0 auto (@baseSpacing * 2);
+				padding: (@baseSpacing / 2) @baseSpacing;
+				width: 100%;
+			}
+		}
+	}
+
+	.text-wrap {
+	  .make-col(8);
+	  .make-col-md(12, @baseSpacing (@baseSpacing / 2) (@baseSpacing / 3));
+	  .push(2);
+	}
+}
+
+@media @maxPhone {
+	#section-contact {
+		padding: @baseSpacing / 2;
+
+		.form-wrap form > div {
+			padding-bottom: 0;
+			padding-top: 0;
 		}
 	}
 }
+
+@media @maxPhoneSm {
+	#section-contact {
+		.text-wrap {
+			padding: 0;
+		}
+
+		.form-wrap form > div {
+			padding: 0;
+			width: 100%;
+		}
+	}
+}
+

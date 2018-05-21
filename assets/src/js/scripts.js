@@ -1,5 +1,5 @@
 
-jQuery(document).ready(function( $ ){
+jQuery(document).ready(function($){
   $(function() {
     var $header = $('#header');
     var snap = 60;

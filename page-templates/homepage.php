@@ -3,8 +3,8 @@
  * Template Name: Home Page
  *
  * @package WordPress
- * @subpackage First_Lady
- * @since First Lady 3.0
+ * @subpackage Max_Harris_Portfolio
+ * @since Max Harris Portfolio 1.0
  */
 ?>
 

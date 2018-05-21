@@ -1,5 +1,5 @@
 <section id="section-services">
-	<div class="flex-container">
+	<div class="container-fluid">
 		<ul class="panel-list">
 			<li>
 				<i class="fas fa-terminal"></i>
