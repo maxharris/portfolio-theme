@@ -1,8 +1,8 @@
-.home {
+body.home {
 	text-align: center;
 
 	#header {
-	  top: -90px;
+	  // top: -90px;
 
 	  .container-fluid {
 		  .logo-wrap {
@@ -11,8 +11,8 @@
 		  	text-align: center;
 
 		  	.logo {
-					margin-bottom: -90px;
-			    position: relative;
+		  		display: inline-block;
+		  		margin: 0 auto -(@baseSpacing * 3);
 			  }
 			}
 
@@ -21,6 +21,10 @@
 		  }
 	  }
 	}
+
+	&.sticky #header .container-fluid .logo {
+    margin-bottom: 0;
+  }
 }
 
 #section-home-header {

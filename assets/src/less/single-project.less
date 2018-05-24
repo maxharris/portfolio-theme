@@ -1,0 +1,34 @@
+body.single-projects {
+  .sidebar {
+    .make-col(4, 0);
+    .make-col-md(12, 0);
+    background-color: @white;
+    border: 1px solid @grey;
+    margin: @baseSpacing 0;
+    position: absolute;
+
+    aside {
+      padding: (@baseSpacing / 2) @baseSpacing;
+      
+      h3 {
+        text-align: left;
+      }
+    }
+  }
+
+  .page-content {
+    .make-col(8, 0 @baseSpacing);
+    .make-col-md(12, 0);
+    .push(4);
+
+    img {
+      display: block;
+      margin: 0 auto (@baseSpacing * 2);
+    }
+  }
+
+  &.sticky .sidebar {
+    top: @baseSpacing * 3.5;
+    position: fixed;
+  }
+}

@@ -1,25 +1,24 @@
 
 jQuery(document).ready(function($){
   $(function() {
-    var $header = $('#header');
-    var snap = 50;
+    var $body = $('body');
+    var snap = 140;
     var $window = $(window);
 
     $window.on('scroll', _.throttle(function() {
       var $scroll = $window.scrollTop();
 
       if ($scroll >= snap) {
-        $header.addClass('sticky');
+        $body.addClass('sticky');
       }
 
       else {
-        $header.removeClass('sticky');
+        $body.removeClass('sticky');
       }
-
     }));
   });
 
-  //Mobile Menu Toggle
+  // Mobile Menu Toggle
   $(function() {
     var menuBtn = $('.menu-toggle');
     var navMenu = $('#header .menu-wrap');

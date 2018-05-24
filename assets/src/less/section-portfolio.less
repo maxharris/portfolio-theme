@@ -1,54 +1,82 @@
-#section-portfolio {
-  text-align: center;
+.card-grid .container > ul {
+  display: flex;
+  flex-flow: row wrap;
 
-   .container > ul > li {
+  > li {
     .make-col(6, @baseSpacing / 2);
     .make-col-md(12, 0);
+    display: flex;
 
-    img {
-      display: block;
+    .card {
+      border: 1px solid @grey-light;
+      position: relative;
+
+      .project-meta {
+        .make-col(12, @baseSpacing);
+        .make-col-sm(12, @baseSpacing / 2);
+        float: none;
+        margin: 0 auto @baseSpacing;
+        overflow: visible;
+        text-align: center;
+        
+        h3 {
+          line-height: @line-height-heading;
+          margin-top: @baseSpacing / 2;
+          text-transform: none;
+
+          &:after {
+            display: none;
+          }
+        }
+
+        .btn {
+          font-size: @font-size-xs;
+          margin: @baseSpacing auto 0;
+          padding: @baseSpacing / 3;
+          width: 150px;
+        }
+
+        ul.tags {
+          bottom: @baseSpacing / 3;
+          left: 0;
+          position: absolute;
+          right: 0;
+
+          li a {
+            color: @grey;
+            display: inline;
+            font-size: @font-size-xs;
+            margin: @baseSpacing / 5;
+            text-transform: uppercase;
+
+             &:hover {
+              color: @link-hover-color;
+            }
+          }
+        }
+      }
     }
   }
 }
 
-.project-meta {
-  .make-col(12, @baseSpacing);
-  .make-col-sm(12, @baseSpacing / 2);
-  border: 1px solid @grey-light;  
-  margin: 0 auto @baseSpacing;
-  
-  h3 {
-    line-height: @line-height-heading;
-    margin-top: @baseSpacing / 2;
-    text-transform: none;
+ul.tags li a {
+  color: @grey;
+  display: inline;
+  font-size: @font-size-xs;
+  margin: @baseSpacing / 5;
+  text-transform: uppercase;
 
-    &:after {
-      display: none;
-    }
-  }
-
-  span {
-    display: inline-block;
-    padding: 0 0 (@baseSpacing / 3);
-  }
-
-  .btn {
-    font-size: @font-size-sm;
-    padding: @baseSpacing / 3;
-    width: 170px;
+   &:hover {
+    color: @link-hover-color;
   }
 }
 
 @media @maxPhone {
-  #section-portfolio .container {
+  .card-grid .container {
     padding: 0;
-  }
 
-  .project-meta {
-    margin-top: 0;
-
-    span {
-      padding: 0;
+    > ul > li {
+      margin-bottom: @baseSpacing;
     }
   }
 }

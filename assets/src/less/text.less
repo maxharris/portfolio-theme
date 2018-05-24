@@ -16,11 +16,13 @@ h2 {
   
 h3 {
   .make-heading();
-  font-weight: @font-weight-heavy;
+}
+
+h3.heading {
   margin: 0 auto (@baseSpacing / 3);
   text-transform: uppercase;
 
-    &::after {
+  &::after {
     background-color: @blue;
     content: " ";
     display: block;
@@ -82,16 +84,5 @@ ul {
 
   li {
     list-style-type: none;
-  }
-}
-
-ul.tags {
-  margin-bottom: @baseSpacing / 3;
-
-  li {
-    color: @grey;
-    display: inline;
-    font-weight: @font-weight-heavy;
-    margin: @baseSpacing / 5;
   }
 }

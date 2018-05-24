@@ -1,4 +1,4 @@
-<section id="section-portfolio">
+<section id="section-portfolio" class="card-grid">
 	<div class="container">
 		<h2 class="section-title">My Work</h2>
 		<?php 
@@ -14,8 +14,10 @@
 				<?php wp_reset_postdata(); ?>
 			<?php endwhile; ?>
 			</ul>
-			<?php else: ?>
-				<p><?php _e( 'Sorry, no posts matched your criteria.' ); ?></p>
+			<!-- <a class="btn" href="/projects">View More Projects</a> -->
+
+		<?php else: ?>
+			<p><?php _e( 'Sorry, no posts matched your criteria.' ); ?></p>
 		<?php endif; ?>
 	</div>
 </section>

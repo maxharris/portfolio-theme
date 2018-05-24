@@ -1,145 +1,144 @@
-body #header {
-  .transition(box-shadow);
-  background-color: @white;
-  box-shadow: transparent;
-  position: fixed;
-  width: 100%;
-  z-index: 900;
+body {
+  #header {
+    .transition(box-shadow);
+    background-color: @white;
+    box-shadow: transparent;
+    position: fixed;
+    width: 100%;
+    z-index: 900;
 
-  .container-fluid {
-    .clearfix();
-    position: relative;
-    padding: (@baseSpacing / 2) @baseSpacing;
+    .container-fluid {
+      .clearfix();
+      position: relative;
+      padding: (@baseSpacing / 2) @baseSpacing;
 
-    .logo-wrap {
-      .make-col(3, 0);
-      .make-col-sm(4, 0);
+      .logo-wrap {
+        .make-col(3, 0);
+        .make-col-sm(4, 0);
 
-      .logo {
-        .transition(margin-bottom);
-        max-width: 220px;
-        z-index: 920;
+        .logo {
+          .transition(margin-bottom);
+          max-width: 220px;
+          z-index: 920;
+        }
       }
-    }
 
-    .title-wrap {
-      .make-col(6, 0);
+      .title-wrap {
+        .make-col(6, 0);
 
-      h2 {
-        .make-title();
-        .transition(margin-top);
-        // line-height: @line-height;
-        margin-top: -80px;
-        z-index: 910;
+        h2 {
+          .make-title();
+          .transition(margin-top);
+          margin-top: -80px;
+          z-index: 910;
+        }
       }
-    }
 
-    .menu-wrap {
-      .make-col(3, 0);
-      float: right;
-      overflow: visible;
-      text-align: right;
+      .menu-wrap {
+        .make-col(3, 0);
+        float: right;
+        overflow: visible;
+        text-align: right;
 
 
-      .menu {
-        z-index: 980;
+        .menu {
+          z-index: 980;
 
-        li {
-          display: inline-block;
-          margin: (@baseSpacing / 3) (@baseSpacing / 5);
+          li {
+            display: inline-block;
+            margin: (@baseSpacing / 3) (@baseSpacing / 5);
 
-          a {
-            color: @black;
-            font-size: @font-size-sm;
-            font-weight: @font-weight-heavy;
-            text-transform: uppercase;
+            a {
+              color: @black;
+              font-size: @font-size-sm;
+              font-weight: @font-weight-heavy;
+              text-transform: uppercase;
 
-            &:hover {
+              &:hover {
+                color: @blue;
+              }
+            }
+
+            &.current-menu-item a {
               color: @blue;
+            }
+
+            &:last-of-type {
+              margin-right: 0;
+            }
+          }
+        }
+
+        .menu-toggle {
+          background: transparent;
+          border: 0 solid;
+          cursor: pointer;
+          float: right;
+          height: 22px;
+          margin: (@baseSpacing / 3) 0 0;
+          padding: 0;
+          position: relative;
+          width: 22px;
+          z-index: 990;
+
+          span {
+            display: block;
+            position: absolute;
+            width: 22px;
+
+            &::after {
+              .transition(transform);
+              border-top: 2px solid @black;
+              content: " ";
+              display: block;
+              margin: 4px auto;
+              position: absolute;
+              width: 100%;
+            }
+
+            &:nth-child(1) { 
+              top: 0;
+            }
+
+            &:nth-child(2) { 
+              top: 6px; 
+            }
+
+            &:nth-child(3) { 
+              top: 12px; 
             }
           }
 
-          &:last-of-type {
-            margin-right: 0;
-          }
-        }
-      }
+          &.open span {
+            &:nth-child(1):after {
+              margin-top: 10px;
+              transform: rotate(45deg);
+            }
 
-      .menu-toggle {
-        background: transparent;
-        border: 0 solid;
-        cursor: pointer;
-        float: right;
-        height: 22px;
-        margin: (@baseSpacing / 3) 0 0;
-        padding: 0;
-        position: relative;
-        width: 22px;
-        z-index: 990;
+            &:nth-child(2):after {
+              opacity: 0;
+            }
 
-        span {
-          display: block;
-          position: absolute;
-          width: 22px;
-
-          &::after {
-            .transition(transform);
-            border-top: 2px solid @black;
-            content: " ";
-            display: block;
-            margin: 4px auto;
-            position: absolute;
-            width: 100%;
+            &:nth-child(3):after {
+              margin-top: -2px;
+              transform: rotate(-45deg);
+            }
           }
 
-          &:nth-child(1) { 
-            top: 0;
+          &:focus {
+            outline: none;
           }
-
-          &:nth-child(2) { 
-            top: 6px; 
-          }
-
-          &:nth-child(3) { 
-            top: 12px; 
-          }
-        }
-
-        &.open span {
-          &:nth-child(1):after {
-            margin-top: 10px;
-            transform: rotate(45deg);
-          }
-
-          &:nth-child(2):after {
-            opacity: 0;
-          }
-
-          &:nth-child(3):after {
-            margin-top: -2px;
-            transform: rotate(-45deg);
-          }
-        }
-
-        &:focus {
-          outline: none;
         }
       }
     }
   }
 
-  &.sticky {
+  &.sticky #header {
     box-shadow: @box-shadow;
     top: 0;
 
-    .container-fluid {
-      .logo-wrap .logo {
-        margin: 0 auto;
-      }
-
-      h2 {
-        margin-top: 0;
-      }
+    .container-fluid h2 {
+      margin-top: 0;
     }
   }
 }
@@ -157,13 +156,13 @@ body #header {
 }
 
 @media @maxPhone {
-  body.admin-bar #header.sticky {
-    margin-top: 46px; // Accounting for the WordPress admin bar when present
+  body.admin-bar.sticky #header {
+ //   margin-top: 46px; // Accounting for the WordPress admin bar when present
   }
 }
 
 @media @minPhone {
-  body.admin-bar #header.sticky {
+  body.admin-bar.sticky #header {
     margin-top: 32px; // Accounting for the WordPress admin bar when present
   }
 }
@@ -192,6 +191,10 @@ body #header {
           margin: 5px;
           margin-top: @baseSpacing * 2;
         }
+      }
+
+      .menu-toggle {
+        margin-top: 7px;
       }
 
       &.open .menu li {

@@ -1,11 +1,11 @@
-
+// Utility
 .clearfix() {
   &:after {
     content: "";
     display: table;
     clear: both;
   }
-} 
+}
 
 // Grid Mixins
 .row(@padding:@baseSpacing) {
@@ -40,9 +40,11 @@
 .make-heading() {
   font-family: @font-family-heading;
   font-size: @font-size-lg;
-  font-weight: @font-weight-medium;
+  font-weight: @font-weight-heavy;
   line-height: @line-height-heading;
+  margin: (@baseSpacing / 2) 0;
   text-align: center;
+  text-transform: uppercase;
 }
 
 .button(@color:@black) {
