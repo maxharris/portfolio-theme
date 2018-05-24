@@ -7,9 +7,7 @@
       <h1 class="page-title">
         <?php single_term_title( ' ', $title . ' Projects ' ); ?> Projects
       </h1>
-      <p>
         <?php echo term_description(); ?>
-      </p>
     </header>
      <div class="page-content">
       <ul>

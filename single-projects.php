@@ -10,6 +10,9 @@
             <ul class="tags">
               <?php the_terms( $post->ID, 'project-types', '<li>', ' &middot; ', '</li> ' ); ?>
             </ul>
+            <p>
+              <?php the_excerpt(); ?>
+            </p>
           </header>
           <div class="page-content">
             <?php the_content(); ?>

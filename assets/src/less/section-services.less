@@ -1,18 +1,21 @@
 #section-services {
 	background-color: @blue-dark;
 
+	h2 {
+		color: @white;
+	}
+
 	.panel-list {
 		display: flex;
 		flex-flow: row wrap;
 		justify-content: space-around;
-		margin: (@baseSpacing / 2) auto 0;
 		padding: @baseSpacing;
 
 		li {
 			background-color: @white;
 			flex: 0 1 30%;
 			margin-bottom: 2% ;
-			padding: @baseSpacing (@baseSpacing / 2);
+			padding: @baseSpacing (@baseSpacing / 2) (@baseSpacing * 2);
 			position: relative;
 
 			h3 {

@@ -1,12 +1,23 @@
 .page-header {
-  text-align: center;
-  margin-top: @baseSpacing * 2;
   padding: @baseSpacing;
+  text-align: center;
+
+  p {
+    .make-col-lg(8, 0 @baseSpacing, 2);
+    .make-col-sm(12, 0);
+  }
 }
 
 .page-content {
-  .make-col(12, (@baseSpacing * 2) @baseSpacing (@baseSpacing * 3));
+  .make-col(12, @baseSpacing (@baseSpacing * 3) (@baseSpacing * 3));
   .make-col-md(12, 0);
+  box-shadow: @box-shadow-vertical;
+  margin-bottom: @baseSpacing;
+
+  img {
+    display: block;
+    margin: 0 auto (@baseSpacing * 2);
+  }
 }
 
 .page-title,
@@ -14,8 +25,30 @@
   .make-title();
 }
 
+.section-title {
+  font-size: @font-size-xxl;
+  margin-bottom: @baseSpacing * 2;
+}
+
 .page-title {
   font-size: @font-size-xxl;
   line-height: @line-height-title;
   margin: 0 auto @baseSpacing;
+}
+
+@media @maxPhone {
+	.page-header {
+    margin-bottom: @baseSpacing / 2;
+    margin-top: @baseSpacing * 2;
+    padding: 0;
+
+	  .page-title {
+	    font-size: @font-size-xl;
+      line-height: @line-height-heading;
+	  }
+  }
+
+  .section-title {
+    margin: (@baseSpacing / 2) auto @baseSpacing;
+  }
 }

@@ -12,6 +12,7 @@
 	.form-wrap {
 	  .make-col(8, @baseSpacing (@baseSpacing * 2));
 	  .make-col-md(12, 0 (@baseSpacing / 2));
+	  .make-col-sm(12, 0);
 	  .push(2);
 
 	  .contact-info {
@@ -25,6 +26,15 @@
 		  	font-size: @font-size-sm;
 		  	margin: 0 (@baseSpacing / 3);
 
+		  	a {
+		  		.transition(color);
+		  		color: @white;
+
+		  		&:hover {
+		  			color: @yellow;
+		  		}
+		  	}
+
 		  	.svg-inline--fa {
 	    		font-size: @font-size-sm;
 		  	}
@@ -36,26 +46,6 @@
 
 		  p label {
 		  	line-height: 1.2rem;
-		  }
-
-		  input,
-		  textarea { 
-				background-color: @grey-light;
-		  }
-
-		  input[type="submit"] {
-		  	.transition(background-color);
-		  	background-color: @black;
-		  	bottom: @baseSpacing * 1.8;
-		  	color: @white;
-		  	position: absolute;
-		  	right: @baseSpacing / 2.6;
-
-
-		  	&:hover {
-		  		background-color: @blue-dark;
-		  		border-color: @blue-dark;
-		  	}
 		  }
 
 			> div {
@@ -76,15 +66,16 @@
 	}
 
 	.text-wrap {
-	  .make-col(8);
+	  .make-col(8, 0 (@baseSpacing * 2));
 	  .make-col-md(12, @baseSpacing (@baseSpacing / 2) (@baseSpacing / 3));
 	  .push(2);
 	}
 }
 
 @media @maxPhone {
+	.page-contact .page-section, 
 	#section-contact {
-		padding: @baseSpacing / 2;
+		padding: 0;
 
 		.form-wrap form > div {
 			padding-bottom: 0;
@@ -94,15 +85,25 @@
 }
 
 @media @maxPhoneSm {
-	#section-contact {
+	#section-contact, 
+	.page-contact .page-section {
 		.text-wrap {
 			padding: 0;
 		}
 
-		.form-wrap form > div {
-			padding: 0;
-			width: 100%;
+		.form-wrap {
+			.contact-info { 
+				ul li {
+					display: block;
+					margin: @baseSpacing / 5;
+					text-align: left;
+				}
+			}
+
+			form > div {
+				padding: 0;
+				width: 100%;
+			}
 		}
 	}
 }
-

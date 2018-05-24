@@ -11,6 +11,9 @@
 			<p>
 				My mission is to build and ship tools that revolutionize access to education, entrepreneurship, and political engagement. Ideally, I would like to lead front-end development for scalable, community-facing products in these areas. 
 			</p>
+			<p>
+				I believe in solving problems of inclusion with technology, and solving problems of technology with inclusion.
+			</p>
 		</div>
 	</div>
 </section>

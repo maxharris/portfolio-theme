@@ -9,7 +9,6 @@ remove_action('wp_head', 'wp_generator');
 function register_menus() {
   register_nav_menus( array(
     'header_menu' => 'Header Menu',
-      'shop_header_menu' => 'Shop Header Menu',
     'social_media_menu' => 'Social Media Menu'
   ));
 }
@@ -31,8 +30,8 @@ global $post;
 add_filter( 'body_class', 'add_slug_body_class' );
 
 // Paragraphs
-// remove_filter( 'the_content', 'wpautop' );
-// remove_filter( 'the_excerpt', 'wpautop' );
+remove_filter( 'the_content', 'wpautop' );
+remove_filter( 'the_excerpt', 'wpautop' );
 
 
 // Archive Title Formatting
@@ -64,6 +63,7 @@ function remove_width_attribute( $html ) {
   $html = preg_replace( '/(width|height)="\d*"\s/', "", $html );
   return $html;
 }
+
 
 // Widgets
 function max_widgets_init() {

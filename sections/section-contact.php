@@ -1,8 +1,9 @@
 <section id="section-contact">
 	<div class="container">
-		<div class="text-wrap">
+			<h2 class="section-title">Contact Me</h2>
+			<div class="text-wrap">
 			<p>
-				Interested in working together on a project? If you need a site for whatever you are doing, have an idea for an app, or want to learn more about WordPress and the web, please contact me. I love working with new people.
+				Do you have an idea for an app, or need to create a website for your business? Contact me using to form below. I am also available for instruction and training, and I love working on porjects of all sizes.
 			</p>
 		</div>
 		<div class="form-wrap">

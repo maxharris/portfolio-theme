@@ -1,92 +1,54 @@
 #section-portfolio {
   text-align: center;
 
-   .container-fluid > ul > li {
-    .row(0);
-    margin: (@baseSpacing * 2) 0;
+   .container > ul > li {
+    .make-col(6, @baseSpacing / 2);
+    .make-col-md(12, 0);
 
-    .image-wrap {
-      .make-col(6, 0 @baseSpacing);
-      .make-col-md(12, 0);
-      position: relative;
-
-      img {
-        box-shadow: @box-shadow;
-      }
-    }
-  
-    .project-meta {
-      .make-col(6,  @baseSpacing);
-      .make-col-md(12, 0 (@baseSpacing / 2));
-
-      h3:after {
-        display: none;
-        margin-top: @baseSpacing / 2;
-      }
-
-      span {
-        display: inline-block;
-        padding: 0 (@baseSpacing * 3) (@baseSpacing / 3);
-      }
-    }
-
-    &:nth-of-type(2n) {
-      .image-wrap {
-        float: right;
-      }
-
-      .project-meta {
-        float: left;
-      }
-    }
-
-    &:first-of-type {
-      margin-top: @baseSpacing / 2;
-    }
-
-    &:last-of-type {
-      margin-bottom: @baseSpacing;
+    img {
+      display: block;
     }
   }
 }
 
-.section-portfolio,
-#section-portfolio { 
-  ul li .project-meta {
-  text-align: center;
+.project-meta {
+  .make-col(12, @baseSpacing);
+  .make-col-sm(12, @baseSpacing / 2);
+  border: 1px solid @grey-light;  
+  margin: 0 auto @baseSpacing;
   
-    h3 {
-      line-height: @line-height-heading;
-      text-transform: none;
-    }
+  h3 {
+    line-height: @line-height-heading;
+    margin-top: @baseSpacing / 2;
+    text-transform: none;
 
-    .btn {
-      font-size: @font-size-sm;
-      padding: @baseSpacing / 3;
-      width: 170px;
+    &:after {
+      display: none;
     }
+  }
+
+  span {
+    display: inline-block;
+    padding: 0 0 (@baseSpacing / 3);
+  }
+
+  .btn {
+    font-size: @font-size-sm;
+    padding: @baseSpacing / 3;
+    width: 170px;
   }
 }
 
 @media @maxPhone {
-  .section-portfolio,
-  #section-portfolio { 
-    .container-fluid ul > li .project-meta span {
-      padding: 0;
-    }
+  #section-portfolio .container {
+    padding: 0;
   }
-}
 
-@media @maxTablet {
-  #section-portfolio ul li {
-    margin: (@baseSpacing * 2) 0;
+  .project-meta {
+    margin-top: 0;
 
-    .image-wrap img {
-      margin-bottom: @baseSpacing / 2;
-    }
-
-    .btn {
-      padding: @baseSpacing / 2;
+    span {
+      padding: 0;
     }
   }
 }

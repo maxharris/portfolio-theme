@@ -1,5 +1,6 @@
 <section id="section-portfolio">
-	<div class="container-fluid">
+	<div class="container">
+		<h2 class="section-title">My Work</h2>
 		<?php 
 			$args = array( 
 				'post_type' => 'projects',

@@ -1,18 +1,24 @@
+
+.clearfix() {
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+} 
+
 // Grid Mixins
 .row(@padding:@baseSpacing) {
+  .clearfix();
   padding-left: @padding;
   padding-right: @padding;
   width: 100%;
-
-  &::after {
-    content: "";
-    clear: both;
-    display: table;
-  }
 }
 
 .make-col(@columns; @padding:@baseSpacing) {
   float: left;
+  min-height: 1px;
+  overflow: hidden;
   padding: @padding;
   width: 100%*(@columns / @baseColumnCount);
 }
@@ -39,22 +45,23 @@
   text-align: center;
 }
 
-.button(@color:@white; @margin:(@baseSpacing / 2) auto 0 ) {
-  .transition(background-color);
-  background-color: @black;
-  color: @color;
+.button(@color:@black) {
+  background-color: @color;
+  border-color: @color;
+  color: @white;
   cursor: pointer;
   display: block;
   font: @font-size-button @font-family-button;
-  font-weight: @font-weight-light;
+  font-weight: @font-weight-heavy;
   letter-spacing: @letter-spacing-title;
   line-height: @line-height-btn;
-  margin: @margin;
+  margin: (@baseSpacing / 2) auto;
   max-width: 200px;
   padding: (@baseSpacing / 2) @baseSpacing;
   position: relative;
   text-align: center;
   text-transform: uppercase;
+  transition: background-color @transition-speed, border-color @transition-speed;
 
   &:hover,
   &:active {

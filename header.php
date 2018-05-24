@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title><?php bloginfo('title'); ?></title>
+	<title><?php bloginfo('name');  echo ' ';  bloginfo('description'); ?></title>
 	
-	<meta name="description" content='....'>
+	<meta name="description" content='<?php bloginfo('description'); ?>'>
   <meta name="keywords" content="...">
 	<meta http-equiv="Content-Type" content="text/html" charset="utf-8">
 	<meta name="msapplication-TileColor" content="#ffffff">
@@ -32,16 +32,30 @@
 <body <?php body_class(); ?>>
 <header id="header">
 	<div class="container-fluid">
-		<a href="<?php echo esc_url( site_url( '/' ) ); ?>">
-			<img class="logo" src="<?php echo get_stylesheet_directory_uri(); ?>/images/max-harris-logo.svg">
-		</a>
-		<?php 
-			if ( (is_page() && ! is_front_page()) || is_single()) {
-				echo '<h2>' . get_the_title() . '</h2>';
-			}
-			elseif (is_archive()) {
-				echo '<h2>' . single_term_title( ' ', $title) . ' Projects</h2>';
-			}
-		?>
+		<div class="logo-wrap">
+			<a href="<?php echo esc_url( site_url( '/' ) ); ?>">
+				<img class="logo" src="<?php echo get_stylesheet_directory_uri(); ?>/images/max-harris-logo.svg">
+			</a>
+		</div>
+		<div class="title-wrap">
+			<?php 
+				if ( (is_page() && ! is_front_page()) || is_single()) {
+					echo '<h2>' . get_the_title() . '</h2>';
+				}
+				elseif (is_archive()) {
+					echo '<h2>' . single_term_title( ' ', $title) . ' Projects</h2>';
+				}
+			?>
+		</div>
+		<div class="menu-wrap">
+			<?php wp_nav_menu( array('container' => 'menu', 'container_class' => 'menu-wrap') ); ?>
+
+			<button class="menu-toggle">
+				<span></span>
+				<span></span>
+				<span></span>
+				<span class="sr-only">Toggle navigation</span>
+			</button>
+		</div>
 	</div>
 </header>

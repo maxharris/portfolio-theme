@@ -9,8 +9,10 @@
 		  	<i class="fab fa-linkedin"></i>
 		  </a>
 		</div>
-    <span class="copyright">
-      Powered by <i class="fab fa-wordpress-simple"></i> WordPress – Theme by Max Harris | &copy; Copyright <?php echo date("Y"); ?> Max Harris
+    <span>
+      &copy; Copyright <?php echo date("Y"); ?> Max Harris
+			<span class="divider">|</span>
+      Powered by <i class="fab fa-wordpress-simple"></i> WordPress 
     </span>
   </div>
 </footer>

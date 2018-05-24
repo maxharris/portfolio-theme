@@ -2,7 +2,7 @@
 jQuery(document).ready(function($){
   $(function() {
     var $header = $('#header');
-    var snap = 60;
+    var snap = 50;
     var $window = $(window);
 
     $window.on('scroll', _.throttle(function() {
@@ -20,10 +20,9 @@ jQuery(document).ready(function($){
   });
 
   //Mobile Menu Toggle
-
   $(function() {
     var menuBtn = $('.menu-toggle');
-    var navMenu = $('#header .main-nav');
+    var navMenu = $('#header .menu-wrap');
 
     menuBtn.click(function(e) {
       $(this).toggleClass('open');
