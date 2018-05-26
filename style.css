@@ -410,7 +410,7 @@ body #header .container-fluid .logo-wrap {
     float: left;
     min-height: 1px;
     overflow: hidden;
-    padding: 0;
+    padding: 15px;
     width: 33.33333333%;
     margin-left: 0%;
   }
@@ -575,6 +575,9 @@ body.sticky #header .container-fluid h2 {
   body #header .container-fluid {
     overflow: visible;
   }
+  body #header .container-fluid .logo-wrap .logo {
+    margin-top: 4px;
+  }
   body #header .container-fluid .menu-wrap .menu {
     transition: top 0.15s ease-in;
     will-change: top;
@@ -593,7 +596,7 @@ body.sticky #header .container-fluid h2 {
     width: 100%;
   }
   body #header .container-fluid .menu-wrap .menu-toggle {
-    margin-top: 2px;
+    margin-top: 7px;
   }
   body #header .container-fluid .menu-wrap.open .menu {
     top: 100%;
@@ -664,7 +667,7 @@ body.home.sticky #header .container-fluid .logo {
     float: left;
     min-height: 1px;
     overflow: hidden;
-    padding: 0;
+    padding: 15px;
     width: 100%;
     margin-left: 0%;
   }
@@ -717,7 +720,6 @@ body.home.sticky #header .container-fluid .logo {
 }
 #section-bio {
   background-color: #003955;
-  padding: 120px 0 0;
 }
 #section-bio .container-fluid {
   overflow: visible;
@@ -728,11 +730,21 @@ body.home.sticky #header .container-fluid .logo {
   min-height: 1px;
   overflow: hidden;
   padding: 0;
-  width: 50%;
+  width: 41.66666667%;
   bottom: 0;
   position: absolute;
 }
 @media only screen and (max-width: 899px) {
+  #section-bio .container-fluid .image-wrap {
+    float: left;
+    min-height: 1px;
+    overflow: hidden;
+    padding: 15px;
+    width: 33.33333333%;
+    margin-left: 0%;
+  }
+}
+@media only screen and (max-width: 599px) {
   #section-bio .container-fluid .image-wrap {
     float: left;
     min-height: 1px;
@@ -748,9 +760,9 @@ body.home.sticky #header .container-fluid .logo {
 #section-bio .container-fluid .text-wrap {
   float: left;
   min-height: 1px;
-  padding: 30px 60px 120px;
+  padding: 0 30px 30px;
   width: 50%;
-  margin-left: 50%;
+  margin-left: 41.66666667%;
   margin-top: 120px;
   overflow: hidden;
 }
@@ -759,9 +771,9 @@ body.home.sticky #header .container-fluid .logo {
     float: left;
     min-height: 1px;
     overflow: hidden;
-    padding: 30px;
-    width: 83.33333333%;
-    margin-left: 8.33333333%;
+    padding: 15px;
+    width: 66.66666667%;
+    margin-left: 0%;
   }
 }
 @media only screen and (max-width: 599px) {
@@ -769,7 +781,7 @@ body.home.sticky #header .container-fluid .logo {
     float: left;
     min-height: 1px;
     overflow: hidden;
-    padding: 0 15px;
+    padding: 30px;
     width: 100%;
     margin-left: 0%;
   }
@@ -809,16 +821,12 @@ body.home.sticky #header .container-fluid .logo {
   }
   #section-bio .container-fluid .text-wrap {
     margin-top: 0;
-    padding: 0;
-    padding-right: 30px;
+    padding: 15px;
   }
 }
 @media only screen and (max-width: 899px) {
   #section-bio .container-fluid {
     flex-flow: row;
-  }
-  #section-bio .container-fluid .image-wrap {
-    flex: 0 2 100%;
   }
   #section-bio .container-fluid .image-wrap img {
     background-color: #ffffff;
@@ -827,10 +835,8 @@ body.home.sticky #header .container-fluid .logo {
     height: 220px;
     margin: 30px auto 0;
     position: relative;
+    text-align: center;
     width: 220px;
-  }
-  #section-bio .container-fluid .text-wrap {
-    flex: 0 2 100%;
   }
 }
 #section-services {
@@ -893,6 +899,7 @@ body.home.sticky #header .container-fluid .logo {
 .card-grid .container > ul {
   display: flex;
   flex-flow: row wrap;
+  width: 100%;
 }
 .card-grid .container > ul > li {
   float: left;
@@ -901,6 +908,7 @@ body.home.sticky #header .container-fluid .logo {
   padding: 15px;
   width: 50%;
   display: flex;
+  margin-bottom: 15px;
 }
 @media only screen and (max-width: 1199px) {
   .card-grid .container > ul > li {
@@ -923,7 +931,6 @@ body.home.sticky #header .container-fluid .logo {
   padding: 30px;
   width: 100%;
   float: none;
-  margin: 0 auto 30px;
   overflow: visible;
   text-align: center;
 }
@@ -977,6 +984,12 @@ ul.tags li a {
 ul.tags li a:hover {
   color: #003955;
 }
+ul.tags li a:first-of-type {
+  margin-left: 0;
+}
+ul.tags li a:last-of-type {
+  margin-right: 0;
+}
 @media only screen and (max-width: 899px) {
   .card-grid .container {
     padding: 0;
@@ -1022,7 +1035,7 @@ ul.tags li a:hover {
     float: left;
     min-height: 1px;
     overflow: hidden;
-    padding: 0;
+    padding: 15px;
     width: 100%;
     margin-left: 0%;
   }
@@ -1136,6 +1149,7 @@ ul.tags li a:hover {
   }
 }
 .page-header {
+  margin-bottom: 30px;
   padding: 30px;
   text-align: center;
 }
@@ -1154,7 +1168,7 @@ ul.tags li a:hover {
     float: left;
     min-height: 1px;
     overflow: hidden;
-    padding: 0;
+    padding: 15px;
     width: 100%;
     margin-left: 0%;
   }
@@ -1177,6 +1191,9 @@ ul.tags li a:hover {
     width: 100%;
     margin-left: 0%;
   }
+}
+.page-content p {
+  margin: 0 ;
 }
 .page-title,
 .project-title {
@@ -1217,8 +1234,6 @@ body.single-projects .sidebar {
   padding: 0;
   width: 33.33333333%;
   background-color: #ffffff;
-  border: 1px solid #6b6b6b;
-  margin: 30px 0;
   position: absolute;
 }
 @media only screen and (max-width: 1199px) {
@@ -1232,7 +1247,22 @@ body.single-projects .sidebar {
   }
 }
 body.single-projects .sidebar aside {
-  padding: 15px 30px;
+  float: left;
+  min-height: 1px;
+  overflow: hidden;
+  padding: 30px;
+  width: 100%;
+  border: 1px solid #6b6b6b;
+}
+@media only screen and (max-width: 1199px) {
+  body.single-projects .sidebar aside {
+    float: left;
+    min-height: 1px;
+    overflow: hidden;
+    padding: 15px 30px;
+    width: 83.33333333%;
+    margin-left: 8.33333333%;
+  }
 }
 body.single-projects .sidebar aside h3 {
   text-align: left;
@@ -1241,7 +1271,7 @@ body.single-projects .page-content {
   float: left;
   min-height: 1px;
   overflow: hidden;
-  padding: 0 30px;
+  padding: 0 0 30px 60px;
   width: 66.66666667%;
   margin-left: 33.33333333%;
 }
@@ -1257,54 +1287,24 @@ body.single-projects .page-content {
 }
 body.single-projects .page-content img {
   display: block;
-  margin: 0 auto 60px;
+  margin: 0 auto;
+}
+body.single-projects .page-content p {
+  margin: 0 60px 60px;
 }
 body.single-projects.sticky .sidebar {
   top: 105px;
   position: fixed;
 }
-#section-portfolio .container {
-  padding-top: 0;
-}
-#section-portfolio .container .page-content {
-  float: left;
-  min-height: 1px;
-  overflow: hidden;
-  padding: 60px 90px 90px;
-  width: 100%;
-  box-shadow: 0px 5px 20px -10px #6b6b6b;
-  margin-bottom: 90px;
-}
-#section-portfolio .container .page-content p {
-  margin: 0 30px 90px;
-}
-#section-portfolio .container .page-content img {
-  box-shadow: 0px 5px 20px -10px #6b6b6b;
-  display: block;
-  margin-top: 30px;
-}
-#section-portfolio .container .page-content .wp-caption {
-  margin: 0 auto;
-  text-align: center;
-  width: 100%;
-}
-#section-portfolio .container .page-content .wp-caption img {
-  margin: 30px auto;
-}
-#section-portfolio .container .page-content .wp-caption .wp-caption-text {
-  color: #6b6b6b;
-  font-style: italic;
-}
 @media only screen and (max-width: 1199px) {
-  .section-portfolio {
-    padding: 0;
+  body.single-projects .sidebar,
+  body.single-projects.sticky .sidebar {
+    position: static;
   }
-  .section-portfolio .container .page-content {
-    box-shadow: none;
+  body.single-projects .sidebar aside p,
+  body.single-projects.sticky .sidebar aside p {
+    font-size: 14px;
+    line-height: 1.1rem;
     margin-bottom: 0;
-    padding: 0;
-  }
-  .section-portfolio .container .page-content p {
-    margin: 0 0 30px;
   }
 }

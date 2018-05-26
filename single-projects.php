@@ -10,7 +10,7 @@
           </header>
           <div class="sidebar">
             <aside class="project-details">
-              <h3>Project Details</h3>
+              <!-- <h3>Project Details</h3> -->
               <p>
                 <?php the_excerpt(); ?>
               </p>

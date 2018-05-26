@@ -3,13 +3,13 @@ body.single-projects {
     .make-col(4, 0);
     .make-col-md(12, 0);
     background-color: @white;
-    border: 1px solid @grey;
-    margin: @baseSpacing 0;
     position: absolute;
 
     aside {
-      padding: (@baseSpacing / 2) @baseSpacing;
-      
+      .make-col(12);
+      .make-col-md(10, (@baseSpacing / 2) @baseSpacing, 1);
+      border: 1px solid @grey;
+
       h3 {
         text-align: left;
       }
@@ -17,18 +17,41 @@ body.single-projects {
   }
 
   .page-content {
-    .make-col(8, 0 @baseSpacing);
+    .make-col(8, 0 0 @baseSpacing (@baseSpacing * 2));
     .make-col-md(12, 0);
     .push(4);
 
     img {
       display: block;
-      margin: 0 auto (@baseSpacing * 2);
+      margin: 0 auto;
+    }
+
+    p {
+      margin: 0 (@baseSpacing * 2 ) (@baseSpacing * 2);
     }
   }
 
   &.sticky .sidebar {
     top: @baseSpacing * 3.5;
     position: fixed;
+  }
+}
+
+@media @maxTablet {
+  body.single-projects {
+
+    & .sidebar,
+    &.sticky .sidebar {
+      position: static;
+
+        aside {
+
+        p {
+          font-size: @font-size-sm;
+          line-height: @line-height-sm;
+          margin-bottom: 0;
+        }
+      }
+    }
   }
 }

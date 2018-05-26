@@ -62,7 +62,7 @@ section {
 
 .make-col-sm(@columns, @padding:@baseSpacing, @push:0) {
   @media @maxPhone {
-    .make-col(@columns, @padding);
+    .make-col(@columns, (@baseSpacing / 2));
     .push(@push)
   }
 }

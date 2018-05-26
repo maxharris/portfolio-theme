@@ -1,11 +1,13 @@
 .card-grid .container > ul {
   display: flex;
   flex-flow: row wrap;
+  width: 100%;
 
   > li {
     .make-col(6, @baseSpacing / 2);
     .make-col-md(12, 0);
     display: flex;
+    margin-bottom: @baseSpacing / 2;
 
     .card {
       border: 1px solid @grey-light;
@@ -15,7 +17,6 @@
         .make-col(12, @baseSpacing);
         .make-col-sm(12, @baseSpacing / 2);
         float: none;
-        margin: 0 auto @baseSpacing;
         overflow: visible;
         text-align: center;
         
@@ -66,8 +67,16 @@ ul.tags li a {
   margin: @baseSpacing / 5;
   text-transform: uppercase;
 
-   &:hover {
+  &:hover {
     color: @link-hover-color;
+  }
+
+  &:first-of-type {
+    margin-left: 0;
+  }
+
+  &:last-of-type {
+    margin-right: 0;
   }
 }
 

@@ -18,14 +18,20 @@ jQuery(document).ready(function($){
     }));
   });
 
-  // Mobile Menu Toggle
+  // Universal Toggle
   $(function() {
-    var menuBtn = $('.menu-toggle');
-    var navMenu = $('#header .menu-wrap');
+    var toggle = $('.js-toggle');
+    var expand = toggle.parent('.js-expand');
 
-    menuBtn.click(function(e) {
+    toggle.click(function(e) {
       $(this).toggleClass('open');
-      navMenu.toggleClass('open');
+      expand.toggleClass('open');
+
+      // if (expand.is(':hidden')) {
+      //   expand.show('slow');
+      // } else {
+      //   .expand.slideUp();
+      // }
     });
   });
 });

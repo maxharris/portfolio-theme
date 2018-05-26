@@ -47,10 +47,9 @@
 				}
 			?>
 		</div>
-		<div class="menu-wrap">
-			<?php wp_nav_menu( array('container' => 'menu', 'container_class' => 'menu-wrap') ); ?>
-
-			<button class="menu-toggle">
+		<div class="js-expand menu-wrap">
+			<?php wp_nav_menu( array('container' => 'menu') ); ?>
+			<button class="js-toggle menu-toggle">
 				<span></span>
 				<span></span>
 				<span></span>

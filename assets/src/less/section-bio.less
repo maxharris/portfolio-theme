@@ -1,14 +1,15 @@
 #section-bio {
 	background-color: @blue-dark;
-	padding: (@baseSpacing * 4) 0 0;
+	// padding: (@baseSpacing * 4) 0 0;
 
 	.container-fluid {
 		overflow: visible;
 		padding-bottom: 0;
 
 		.image-wrap {
-			.make-col(6, 0);
-			.make-col-sm(12, @baseSpacing);
+			.make-col(5, 0);
+			.make-col-sm(4, @baseSpacing);
+			.make-col-xs(12, @baseSpacing);
 			bottom: 0;
 			position: absolute;
 
@@ -18,10 +19,10 @@
 		}
 
 		.text-wrap {
-			.make-col(6, @baseSpacing (@baseSpacing * 2) (@baseSpacing * 4));
-			.make-col-sm(10, @baseSpacing, 1);
-			.make-col-xs(12, 0 (@baseSpacing / 2));
-			.push(6);
+			.make-col(6, 0 @baseSpacing (@baseSpacing * 1));
+			.make-col-sm(8, 0 @baseSpacing / 2);
+			.make-col-xs(12);
+			.push(5);
 			margin-top: @baseSpacing * 4;
 			overflow: hidden;
 
@@ -66,8 +67,7 @@
 
 			.text-wrap {
 				margin-top: 0;
-				padding: 0;
-				padding-right: @baseSpacing;
+				padding: (@baseSpacing / 2);
 			}
 		}
 	}
@@ -78,8 +78,6 @@
 		flex-flow: row;
 
 		.image-wrap {
-			flex: 0 2 100%;
-
 			img {
 				background-color: @white;
 				border: 2px solid @white;
@@ -87,12 +85,9 @@
 				height: 220px;
 				margin: @baseSpacing auto 0;
 				position: relative;
+				text-align: center;
 				width: 220px;
 			}
-		}
-
-		.text-wrap {
-			flex: 0 2 100%;
 		}
 	}
 }
