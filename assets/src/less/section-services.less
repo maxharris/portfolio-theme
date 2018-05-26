@@ -1,36 +1,27 @@
 #section-services {
-	background-color: @blue-dark;
-
-	h2 {
-		color: @white;
-	}
-
-	.panel-list {
+	.container-fluid > ul {
 		display: flex;
 		flex-flow: row wrap;
 		justify-content: space-around;
-		padding: @baseSpacing;
 
 		li {
-			background-color: @white;
+			border: 1px solid @grey;
 			flex: 0 1 30%;
-			margin-bottom: 2% ;
-			padding: @baseSpacing (@baseSpacing / 2) (@baseSpacing * 2);
+			margin-top: @baseSpacing / 2;
+			padding: 2% 1%;
 			position: relative;
 
-			h3 {
-				line-height: @line-height-body;
+			p {
+				font-size: @font-size-sm;
+				line-height: @line-height-md;
 			}
 
 			svg {
-				bottom: @baseSpacing / 3;
 				color: @blue;
+				display: none; //
 				font-size: @font-size-icon;
-				left: @baseSpacing / 2;
 				line-height: 1;
-				margin-bottom: @baseSpacing / 2;
-				opacity: 0.17;
-				position: absolute;
+				margin-top: (@baseSpacing / 3) auto;
 			}
 		}
 	}

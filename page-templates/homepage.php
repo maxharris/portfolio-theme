@@ -13,8 +13,9 @@
       <main id="main-content">
         <?php include(get_template_directory() . '/sections/section-home-header.php'); ?>
         <?php include(get_template_directory() . '/sections/section-bio.php'); ?>
-        <?php include(get_template_directory() . '/sections/section-resume.php'); ?>
+        <?php include(get_template_directory() . '/sections/section-languages.php'); ?>
         <?php include(get_template_directory() . '/sections/section-services.php'); ?>
+        <?php include(get_template_directory() . '/sections/section-resume.php'); ?>
         <?php include(get_template_directory() . '/sections/section-portfolio.php'); ?>
         <?php include(get_template_directory() . '/sections/section-contact.php'); ?>
       </main>

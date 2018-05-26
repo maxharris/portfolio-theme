@@ -1,6 +1,6 @@
 <section id="section-portfolio" class="card-grid">
-	<div class="container">
-		<h2 class="section-title">My Work</h2>
+	<div class="container-fluid">
+		<h2 class="section-title">Recent Work</h2>
 		<?php 
 			$args = array( 
 				'post_type' => 'projects',
@@ -14,8 +14,6 @@
 				<?php wp_reset_postdata(); ?>
 			<?php endwhile; ?>
 			</ul>
-			<!-- <a class="btn" href="/projects">View More Projects</a> -->
-
 		<?php else: ?>
 			<p><?php _e( 'Sorry, no posts matched your criteria.' ); ?></p>
 		<?php endif; ?>

@@ -1,7 +1,7 @@
 <section id="section-bio">
 	<div class="container-fluid">
 		<div class="image-wrap">
-			<img class="bio-image" src="<?php echo get_stylesheet_directory_uri(); ?>/images/max-header-bw.png">
+			<img class="bio-image" src="<?php echo get_stylesheet_directory_uri(); ?>/images/max-header.png">
 		</div>
 		<div class="text-wrap">
 			<strong>Hello!</strong>

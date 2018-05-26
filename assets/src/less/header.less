@@ -13,12 +13,13 @@ body {
       padding: (@baseSpacing / 2) @baseSpacing;
 
       .logo-wrap {
-        .make-col(3, 0);
-        .make-col-sm(4, 0);
+        .make-col(2, 0);
+        .make-col-xs(5, 0);
+        margin-top: 7px;
 
         .logo {
           .transition(margin-bottom);
-          max-width: 220px;
+          display: block;
           z-index: 920;
         }
       }
@@ -29,6 +30,7 @@ body {
         h2 {
           .make-title();
           .transition(margin-top);
+          margin-bottom: 0;
           margin-top: -80px;
           z-index: 910;
         }
@@ -39,7 +41,6 @@ body {
         float: right;
         overflow: visible;
         text-align: right;
-
 
         .menu {
           z-index: 980;
@@ -75,7 +76,7 @@ body {
           cursor: pointer;
           float: right;
           height: 22px;
-          margin: (@baseSpacing / 3) 0 0;
+          margin: 0;
           padding: 0;
           position: relative;
           width: 22px;
@@ -155,86 +156,73 @@ body {
   }
 }
 
-@media @maxPhone {
-  body.admin-bar.sticky #header {
- //   margin-top: 46px; // Accounting for the WordPress admin bar when present
-  }
-}
-
-@media @minPhone {
-  body.admin-bar.sticky #header {
-    margin-top: 32px; // Accounting for the WordPress admin bar when present
-  }
-}
-
 @media @maxTablet {
-  body #header .container-fluid {
-    padding: (@baseSpacing / 3) (@baseSpacing / 2);
-    
-    .logo-wrap .logo {
-      max-width: 190px;
-    }
-
-    .title-wrap {
-      display: none;
-    }
-
-    .menu-wrap { 
-      .menu {
-        left: 0;
-        position: absolute;
-        right: 0;
-        text-align: center;
-
-        li {
-          .transition(margin-top);
-          margin: 5px;
-          margin-top: @baseSpacing * 2;
-        }
+  body,
+  body.home { 
+    #header .container-fluid {
+      padding: (@baseSpacing / 3) (@baseSpacing / 2);
+      
+      .logo-wrap {
+        margin-top: 0;
       }
 
-      .menu-toggle {
-        margin-top: 7px;
-      }
-
-      &.open .menu li {
-        margin-top: 5px;
-      }
-    }
-  }
-}
-
-@media @maxPhoneSm {
-  body #header {
-    .container-fluid {
-      overflow: visible;
-
-      .logo-wrap .logo {
-        margin-top: 4px;
+      .title-wrap {
+        display: none;
       }
 
       .menu-wrap {
         .menu {
+          left: 0;
+          position: absolute;
+          right: 0;
+          text-align: center;
+
+          li {
+            .transition(margin-top);
+            margin: 5px;
+            margin-top: @baseSpacing * 2;
+          }
+        }
+
+        &.open .menu li {
+          margin-top: 5px;
+        }
+      }
+    }
+  }
+}
+
+@media @maxPhone {
+  body #header {
+    .container-fluid {
+      overflow: visible;
+
+      .menu-wrap {
+        .menu {
           .transition(top);
-          background-color: lighten(@grey-light, 1%);
+          background-color: @white;
+          border-bottom: 1px solid @grey-light;
+          border-top: 1px solid @grey-light;
           padding: @baseSpacing / 3;
           position: absolute;
-          top: -300%;
+          top: -400%;
           z-index: -1;
 
           li {
+            border: 1px solid @black;
             display: block;
-            margin-top: 5px;
+            margin: (@baseSpacing / 3) auto;
+            width: 200px;
 
             a {
               padding: @baseSpacing / 3;
               width: 100%;
             }
-          }
-        }
 
-        .menu-toggle {
-          margin-top: 7px;
+            &:last-of-type {
+              margin-right: auto;
+            }
+          }
         }
 
         &.open .menu {
@@ -242,5 +230,23 @@ body {
         }
       }
     }
+  }
+}
+
+@media @minTablet {
+  body.admin-bar.sticky #header {
+    margin-top: 32px; // Accounting for the WordPress admin bar when present
+  }
+}
+
+@media @maxTablet {
+  body.admin-bar.sticky #header {
+   margin-top: 46px; // Accounting for the WordPress admin bar when present
+  }
+}
+
+@media @maxPhoneSm {
+  body.admin-bar.sticky #header {
+   margin-top: 0; // Accounting for the WordPress admin bar when present
   }
 }

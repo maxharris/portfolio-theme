@@ -1,21 +1,20 @@
-.card-grid .container > ul {
-  display: flex;
-  flex-flow: row wrap;
-  width: 100%;
+.card-grid .container-fluid > ul {
+  .flex-wrap();
 
   > li {
-    .make-col(6, @baseSpacing / 2);
+    .make-col(6);
     .make-col-md(12, 0);
     display: flex;
     margin-bottom: @baseSpacing / 2;
 
     .card {
-      border: 1px solid @grey-light;
+      border: 1px solid @grey;
       position: relative;
 
       .project-meta {
         .make-col(12, @baseSpacing);
         .make-col-sm(12, @baseSpacing / 2);
+        background-color: @white;
         float: none;
         overflow: visible;
         text-align: center;
@@ -42,18 +41,6 @@
           left: 0;
           position: absolute;
           right: 0;
-
-          li a {
-            color: @grey;
-            display: inline;
-            font-size: @font-size-xs;
-            margin: @baseSpacing / 5;
-            text-transform: uppercase;
-
-             &:hover {
-              color: @link-hover-color;
-            }
-          }
         }
       }
     }
@@ -61,15 +48,10 @@
 }
 
 ul.tags li a {
-  color: @grey;
   display: inline;
   font-size: @font-size-xs;
   margin: @baseSpacing / 5;
   text-transform: uppercase;
-
-  &:hover {
-    color: @link-hover-color;
-  }
 
   &:first-of-type {
     margin-left: 0;

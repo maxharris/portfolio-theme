@@ -8,6 +8,7 @@ body.single-projects {
     aside {
       .make-col(12);
       .make-col-md(10, (@baseSpacing / 2) @baseSpacing, 1);
+      .make-col-xs(12, 0);
       border: 1px solid @grey;
 
       h3 {
@@ -52,6 +53,18 @@ body.single-projects {
           margin-bottom: 0;
         }
       }
+    }
+  }
+}
+
+@media @maxPhoneSm {
+  body.single-projects {
+    h1 {
+      margin: 0 auto @baseSpacing;
+    }
+
+    .sidebar aside {
+      border: none;
     }
   }
 }

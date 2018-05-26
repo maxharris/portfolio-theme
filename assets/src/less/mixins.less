@@ -7,6 +7,12 @@
   }
 }
 
+.flex-wrap() {
+  display: flex;
+  flex-flow: row wrap;
+  margin-top: @baseSpacing * 5;
+}
+
 // Grid Mixins
 .row(@padding:@baseSpacing) {
   .clearfix();
@@ -43,14 +49,14 @@
   font-weight: @font-weight-heavy;
   line-height: @line-height-heading;
   margin: (@baseSpacing / 2) 0;
-  text-align: center;
   text-transform: uppercase;
 }
 
 .button(@color:@black) {
-  background-color: @color;
-  border-color: @color;
-  color: @white;
+  background-color: @white;
+  border: 2px solid @color;
+  border-radius: 3px;
+  color: @color;
   cursor: pointer;
   display: block;
   font: @font-size-button @font-family-button;
@@ -67,7 +73,8 @@
 
   &:hover,
   &:active {
-    background-color: @link-color;
+    background-color: @black;
+    color: @white;
   }
 }
 

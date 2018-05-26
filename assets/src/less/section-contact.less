@@ -1,74 +1,94 @@
 .page-contact .page-section,
 #section-contact {
-	background-color: @blue-dark;
-	padding: @baseSpacing * 2;
-	color: @white;
+	padding: 0;
 
 	> p {
 		margin-bottom: @baseSpacing;
 		text-align: center;
 	}
 
-	.form-wrap {
-	  .make-col(8, @baseSpacing (@baseSpacing * 2));
-	  .make-col-md(12, 0 (@baseSpacing / 2));
-	  .make-col-sm(12, 0);
-	  .push(2);
+	.container-fluid {
+		padding-bottom: 0;
 
-	  .contact-info {
-	  	border-bottom: 1px solid @white;
-	  	padding-bottom: @baseSpacing / 3;
-	  	margin-bottom: @baseSpacing;
-	  	text-align: center;
+		> div {
+			.flex-wrap();
 
-		  ul li {
-		  	display: inline;
-		  	font-size: @font-size-sm;
-		  	margin: 0 (@baseSpacing / 3);
+			.text-wrap {
+			  .make-col(6, @baseSpacing * 3);
+			  .make-col-md(12);
+			  background-color: @blue;
+				color: @white;
+				text-align: left;
 
-		  	a {
-		  		.transition(color);
-		  		color: @white;
+				h3 {
+					margin-bottom: 0;
+				}
 
-		  		&:hover {
-		  			color: @yellow;
-		  		}
-		  	}
+				ul li {
+					margin-bottom: @baseSpacing / 2;
+				}
 
-		  	.svg-inline--fa {
-	    		font-size: @font-size-sm;
-		  	}
-		  }
-		}
-
-	  form {
-	  	text-align: left;
-
-		  p label {
-		  	line-height: 1.2rem;
-		  }
-
-			> div {
-			  .make-col(6, (@baseSpacing / 3));
-
-				&:nth-of-type(2) { padding-left: 0; }
-			  &:nth-of-type(3) { padding-right: 0;}
+				a {
+					color: @white;
+				}
 			}
 
-			div.wpcf7-validation-errors,
-			div.wpcf7-acceptance-missing {
-				border: 2px solid @yellow;
-				margin: 0 auto (@baseSpacing * 2);
-				padding: (@baseSpacing / 2) @baseSpacing;
-				width: 100%;
+			.form-wrap {
+			  .make-col(6, @baseSpacing (@baseSpacing * 3));
+			  .make-col-md(12, 0 (@baseSpacing / 2));
+			  .make-col-sm(12, 0);
+				float: right;
+
+			  .contact-info {
+			  	border-bottom: 1px solid @white;
+			  	margin-bottom: @baseSpacing;
+			  	padding-bottom: @baseSpacing / 3;
+			  	text-align: center;
+
+				  ul li {
+				  	display: inline;
+				  	font-size: @font-size-sm;
+				  	margin: 0 (@baseSpacing / 3);
+
+				  	a {
+				  		.transition(color);
+				  		color: @white;
+
+				  		&:hover {
+				  			color: @yellow;
+				  		}
+				  	}
+
+				  	.svg-inline--fa {
+			    		font-size: @font-size-sm;
+				  	}
+				  }
+				}
+
+			  form {
+			  	text-align: left;
+
+				  p label {
+				  	line-height: 1.2rem;
+				  }
+
+					> div {
+					  .make-col(6, (@baseSpacing / 3));
+
+						&:nth-of-type(2) { padding-left: 0; }
+					  &:nth-of-type(3) { padding-right: 0;}
+					}
+
+					div.wpcf7-validation-errors,
+					div.wpcf7-acceptance-missing {
+						border: 2px solid @yellow;
+						margin: 0 auto (@baseSpacing * 2);
+						padding: (@baseSpacing / 2) @baseSpacing;
+						width: 100%;
+					}
+				}
 			}
 		}
-	}
-
-	.text-wrap {
-	  .make-col(8, 0 (@baseSpacing * 2));
-	  .make-col-md(12, @baseSpacing (@baseSpacing / 2) (@baseSpacing / 3));
-	  .push(2);
 	}
 }
 
@@ -100,7 +120,7 @@
 				}
 			}
 
-			form > div {
+			.form-wrap form > div {
 				padding: 0;
 				width: 100%;
 			}

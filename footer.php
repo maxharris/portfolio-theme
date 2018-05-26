@@ -1,6 +1,7 @@
 <div class="clear-fix">
 <footer>
   <div class="container">
+  	<!-- <h4>Thank you for visiting!</h4> -->
   	<div>
 	  	<a href="https://github.com/maxharris/" target="_blank">
 	  		<i class="fab fa-github"></i>
@@ -16,7 +17,6 @@
     </span>
   </div>
 </footer>
-
 <?php wp_footer(); ?>
 </body>
 </html>
