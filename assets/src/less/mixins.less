@@ -10,7 +10,7 @@
 .flex-wrap() {
   display: flex;
   flex-flow: row wrap;
-  margin-top: @baseSpacing * 5;
+  margin-top: @baseSpacing;
 }
 
 // Grid Mixins
@@ -36,17 +36,20 @@
 // Type Mixins
 .make-title(@font-family:@font-family-title) {
   font-family: @font-family-title;
-  font-size: @font-size-xl;
-  font-style: italic;
-  font-weight: @font-weight-medium;
+  font-size: @font-size-title;
+  font-weight: @font-weight-heavy;
+  letter-spacing: @letter-spacing-title;
   line-height: @line-height-title;
-  text-align: center;
+  margin-bottom: @baseSpacing;
+  text-transform: uppercase;  
+  line-height: @line-height-title;
 }
 
 .make-heading() {
-  font-family: @font-family-heading;
+  font-family: @font-family-title;
   font-size: @font-size-lg;
   font-weight: @font-weight-heavy;
+  letter-spacing: @letter-spacing-heading;
   line-height: @line-height-heading;
   margin: (@baseSpacing / 2) 0;
   text-transform: uppercase;
@@ -55,7 +58,7 @@
 .button(@color:@black) {
   background-color: @white;
   border: 2px solid @color;
-  border-radius: 3px;
+  border-radius: 30px;
   color: @color;
   cursor: pointer;
   display: block;
@@ -64,8 +67,8 @@
   letter-spacing: @letter-spacing-title;
   line-height: @line-height-btn;
   margin: (@baseSpacing / 2) auto;
-  max-width: 200px;
-  padding: (@baseSpacing / 2) @baseSpacing;
+  max-width: 180px;
+  padding: (@baseSpacing / 3) @baseSpacing;
   position: relative;
   text-align: center;
   text-transform: uppercase;

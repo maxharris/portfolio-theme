@@ -1,11 +1,12 @@
 #section-langauges {
-	background-color: @blue;
+	background-color: @blue-dark;
 	color: @white;
 	padding: 0;
 	
 	ul {
 		display: flex;
 		flex-flow: row;
+		justify-content: center;
 
 		li {
 			border-left: 1px solid @white;
@@ -24,5 +25,11 @@
 				margin: (@baseSpacing / 2) auto;
 			}
 		}
+	}
+}
+
+@media @maxPhone {
+	#section-langauges ul {
+		flex-wrap: wrap;
 	}
 }

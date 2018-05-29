@@ -10,6 +10,7 @@
           </header>
           <div class="sidebar">
             <aside class="project-details">
+              <h3><?php the_title(); ?></h3>
               <p>
                 <?php the_excerpt(); ?>
               </p>

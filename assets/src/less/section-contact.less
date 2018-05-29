@@ -16,7 +16,7 @@
 			.text-wrap {
 			  .make-col(6, @baseSpacing * 3);
 			  .make-col-md(12);
-			  background-color: @blue;
+			  background-color: @blue-dark;
 				color: @white;
 				text-align: left;
 
@@ -68,12 +68,16 @@
 			  form {
 			  	text-align: left;
 
-				  p label {
-				  	line-height: 1.2rem;
-				  }
+				  p {
+				  	margin-bottom: 0;
+
+					  label {
+					  	line-height: 1.2rem;
+					  }
+					}
 
 					> div {
-					  .make-col(6, (@baseSpacing / 3));
+					  .make-col(6, 0 (@baseSpacing / 2));
 
 						&:nth-of-type(2) { padding-left: 0; }
 					  &:nth-of-type(3) { padding-right: 0;}
@@ -92,10 +96,21 @@
 	}
 }
 
+@media @minDesktop {
+ #section-contact .container-fluid > div .text-wrap p {
+ 	margin-right: @baseSpacing * 2;
+ }
+}
+
 @media @maxPhone {
 	.page-contact .page-section, 
 	#section-contact {
 		padding: 0;
+
+		.text-wrap ul li {
+			display: inline-block;
+			margin-right: @baseSpacing;
+		}
 
 		.form-wrap form > div {
 			padding-bottom: 0;
@@ -104,11 +119,11 @@
 	}
 }
 
-@media @maxPhoneSm {
-	#section-contact, 
+@media @maxTablet {
+	body #section-contact .container-fluid > div,
 	.page-contact .page-section {
 		.text-wrap {
-			padding: 0;
+			padding: @baseSpacing / 2;
 		}
 
 		.form-wrap {

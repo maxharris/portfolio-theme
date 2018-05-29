@@ -1,5 +1,6 @@
 form {
   .clearfix();
+  margin-bottom: 0;
   position: relative;
 }
 
@@ -11,7 +12,7 @@ label {
 }
 
 input[type=text], input[type=email], input[type=tel], select, textarea {
-  background-color: @white;
+  background-color: transparent;
   border: none;
   border-bottom: 1px solid @grey;
   font-size: @font-size-md;
@@ -26,14 +27,14 @@ input[type=text]:focus, input[type=email]:focus, select:focus, textarea:focus {
 
 textarea {
   border: 1px solid @grey;
-  height: 320px;
+  height: 300px;
   padding: (@baseSpacing / 2);
 }
 
 input[type="submit"] {
   .button(@blue);
   background-color: @blue;
-  bottom: 70px;
+  bottom: 40px;
   color: @white;
   position: absolute;
   right: @baseSpacing / 3;

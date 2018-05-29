@@ -13,7 +13,6 @@
     </div>
     <div class="project-meta">
       <h3 class="project-title"><?php the_title(); ?></h3>
-      <p><?php echo get_excerpt(120); ?></p>
       <ul class="tags">
         <?php the_terms( $post->ID, 'project-types', '<li>', ' &middot; ', '</li> ' ); ?>
       </ul>

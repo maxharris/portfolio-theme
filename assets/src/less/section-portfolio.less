@@ -2,45 +2,33 @@
   .flex-wrap();
 
   > li {
-    .make-col(6);
-    .make-col-md(12, 0);
-    display: flex;
-    margin-bottom: @baseSpacing / 2;
+    .make-col(4);
+    .make-col-sm(6, 0);
+    .make-col-xs(12, 0);
+    margin: 0;
 
     .card {
-      border: 1px solid @grey;
-      position: relative;
+      img {
+        background-color: @blue;
+        opacity: 1;
+        transition: background-color 0.3s ease-in-out;
+
+        &:hover {
+          background-color: @yellow;
+        }
+      }
 
       .project-meta {
-        .make-col(12, @baseSpacing);
-        .make-col-sm(12, @baseSpacing / 2);
-        background-color: @white;
-        float: none;
-        overflow: visible;
-        text-align: center;
         
         h3 {
+          font-size: @font-size-md;
           line-height: @line-height-heading;
-          margin-top: @baseSpacing / 2;
+          margin: (@baseSpacing / 3) auto 0;
           text-transform: none;
 
           &:after {
             display: none;
           }
-        }
-
-        .btn {
-          font-size: @font-size-xs;
-          margin: @baseSpacing auto 0;
-          padding: @baseSpacing / 3;
-          width: 150px;
-        }
-
-        ul.tags {
-          bottom: @baseSpacing / 3;
-          left: 0;
-          position: absolute;
-          right: 0;
         }
       }
     }
@@ -50,24 +38,18 @@
 ul.tags li a {
   display: inline;
   font-size: @font-size-xs;
-  margin: @baseSpacing / 5;
+  font-weight: @font-weight-heavy;
   text-transform: uppercase;
-
-  &:first-of-type {
-    margin-left: 0;
-  }
-
-  &:last-of-type {
-    margin-right: 0;
-  }
 }
 
 @media @maxPhone {
-  .card-grid .container {
-    padding: 0;
+  #section-portfolio {
+    .container-fluid {
+      padding: 0;
 
-    > ul > li {
-      margin-bottom: @baseSpacing;
+      > ul > li {
+        margin-bottom: @baseSpacing / 2;
+      }
     }
   }
 }

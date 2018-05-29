@@ -1,6 +1,6 @@
 .page-header {
   margin-bottom: @baseSpacing;
-  padding: @baseSpacing;
+  // padding: @baseSpacing;
   text-align: center;
 
   p {
@@ -14,33 +14,4 @@
   .make-col-md(12, 0);
   box-shadow: @box-shadow-vertical;
   margin-bottom: @baseSpacing;
-}
-
-.page-content p {
-  margin: 0 ;
-}
-
-.section-title,
-.page-title {
-  font-weight: 700;
-  line-height: @line-height-title;
-  margin-bottom: @baseSpacing * 3;
-  text-transform: uppercase;
-}
-
-@media @maxPhone {
-	.page-header {
-    margin-bottom: @baseSpacing / 2;
-    margin-top: @baseSpacing * 2;
-    padding: 0;
-
-	  .page-title {
-	    font-size: @font-size-xl;
-      line-height: @line-height-heading;
-	  }
-  }
-
-  .section-title {
-    margin: (@baseSpacing / 2) auto @baseSpacing;
-  }
 }

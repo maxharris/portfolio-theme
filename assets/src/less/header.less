@@ -9,15 +9,17 @@ body {
 
     .container-fluid {
       .clearfix();
-      position: relative;
       padding: (@baseSpacing / 2) @baseSpacing;
+      position: relative;
 
       .logo-wrap {
         .make-col(2, 0);
-        .make-col-xs(5, 0);
-        margin-top: 7px;
+        .make-col-sm(3, 0);
+        .make-col-xs(6, 0);
+        margin-top: 5px;
 
         .logo {
+          // .clearfix();
           .transition(margin-bottom);
           display: block;
           z-index: 920;
@@ -26,12 +28,14 @@ body {
 
       .title-wrap {
         .make-col(6, 0);
+        .push(1);
 
         h2 {
-          .make-title();
+          .make-heading();
           .transition(margin-top);
           margin-bottom: 0;
           margin-top: -80px;
+          text-align: center;
           z-index: 910;
         }
       }
@@ -76,7 +80,7 @@ body {
           cursor: pointer;
           float: right;
           height: 22px;
-          margin: 0;
+          margin: 3px 0 0;
           padding: 0;
           position: relative;
           width: 22px;
@@ -163,7 +167,9 @@ body {
       padding: (@baseSpacing / 3) (@baseSpacing / 2);
       
       .logo-wrap {
+        display: block;
         margin-top: 0;
+        // padding: 0;
       }
 
       .title-wrap {
@@ -179,13 +185,12 @@ body {
 
           li {
             .transition(margin-top);
-            margin: 5px;
-            margin-top: @baseSpacing * 2;
+            margin: @baseSpacing / 3;
           }
         }
 
         &.open .menu li {
-          margin-top: 5px;
+          // margin-top: initial;
         }
       }
     }
@@ -197,23 +202,21 @@ body {
     .container-fluid {
       overflow: visible;
 
+      .logo-wrap {
+        padding: 0;
+      }
+
       .menu-wrap {
         .menu {
           .transition(top);
           background-color: @white;
-          border-bottom: 1px solid @grey-light;
-          border-top: 1px solid @grey-light;
+          box-shadow: @box-shadow;
           padding: @baseSpacing / 3;
           position: absolute;
           top: -400%;
           z-index: -1;
 
           li {
-            border: 1px solid @black;
-            display: block;
-            margin: (@baseSpacing / 3) auto;
-            width: 200px;
-
             a {
               padding: @baseSpacing / 3;
               width: 100%;

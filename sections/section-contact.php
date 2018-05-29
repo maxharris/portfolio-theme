@@ -5,7 +5,7 @@
 			<div class="text-wrap">
 				<h3>Let's work together</h3>
 				<p>
-					Do you have an idea for an app, or need to create a website for your business? Drop me a line. I am also available for instruction and training, and I love working on projects of all kinds.
+					Do you have an idea for an app, or need to create a website for your business? Drop me a. I am also available for instruction and training, and I love working on projects of all kinds.
 				</p>
 				<ul>
 				<li>
